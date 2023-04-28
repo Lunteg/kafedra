@@ -1,8 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1682710211 "c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex" "example-work.pdf" "example-work" 1682710215 2
+["pdflatex"] 1682715378 "c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex" "example-work.pdf" "example-work" 1682715385 2
   "SCWorks.cls" 1682707111 32456 df582fba213cc0f63c6ada769d4d1f36 ""
   "c:/Users/Tanya/.texlive2023/texmf-var/fonts/tfm/lh/lh-t2a/larm1440.tfm" 1682694951 3256 3daaa33cf35cf3f354983aa3214ecd7f ""
-  "c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex" 1682710206 81481 c69e61c1228a01b40b84964d95e92ba6 ""
+  "c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex" 1682715368 82244 237f655427a8d2f2dd341599bc146d0b ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/tempora/t2a-tempora.enc" 1682692792 3023 c4581b906237349b927d8aa9ff8a2b60 ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/tempora/tmp_ac5xuc.enc" 1682692792 3362 5293928c6d94ec9cfd8489a657361948 ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/tempora/tmp_q3dzgc.enc" 1682692792 2764 ab775c31a11117826e18b76f6c877df7 ""
@@ -158,9 +158,9 @@
   "c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1682694013 4683147 c40e3a1ac4f9bf67fe64e54fe7cecde0 ""
   "c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1682694226 7887283 d6ce8f28eac70976df917f5e702c7907 ""
   "c:/texlive/2023/texmf.cnf" 1682693981 713 e69b156964470283e0530f5060668171 ""
-  "example-work.aux" 1682710214 630 03456a33c8b7c18f9a014c3fcbfd2c8b "pdflatex"
-  "example-work.tex" 1682710206 81481 c69e61c1228a01b40b84964d95e92ba6 ""
-  "example-work.toc" 1682710214 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "example-work.aux" 1682715382 630 03456a33c8b7c18f9a014c3fcbfd2c8b "pdflatex"
+  "example-work.tex" 1682715368 82244 237f655427a8d2f2dd341599bc146d0b ""
+  "example-work.toc" 1682715382 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "nul" 0 0 d41d8cd98f00b204e9800998ecf8427e ""
   (generated)
   "example-work.aux"
