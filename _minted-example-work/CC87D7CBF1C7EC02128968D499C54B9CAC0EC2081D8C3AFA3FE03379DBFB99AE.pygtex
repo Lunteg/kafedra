@@ -1,0 +1,83 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{}¬ этой реализации опробуем модель, котора€ будет выводить}
+\PYG{c+c1}{\PYGZsh{}среднюю оценку между всеми пользовател€ми, которые его оцен€т. ¬се пользователи будут считатьс€ равными.}
+\PYG{c+c1}{\PYGZsh{} »ными словами, рейтингу каждого пользовател€ присваиваетс€ равный вес.}
+
+\PYG{c+c1}{\PYGZsh{}”чтем случай, что некоторые аниме попали только в тестовый набор: в таком случае как и в \PYGZdq{}глупой\PYGZdq{} модели установим рейтинг 5.}
+\PYG{k}{def} \PYG{n+nf}{mean\PYGZus{}model}\PYG{p}{(}\PYG{n}{user\PYGZus{}id}\PYG{p}{,} \PYG{n}{anime\PYGZus{}id}\PYG{p}{):}
+  \PYG{k}{if} \PYG{n}{anime\PYGZus{}id} \PYG{o+ow}{in} \PYG{n}{r\PYGZus{}matrix}\PYG{p}{:}
+    \PYG{n}{mean\PYGZus{}raiting} \PYG{o}{=} \PYG{n}{r\PYGZus{}matrix}\PYG{p}{[}\PYG{n}{anime\PYGZus{}id}\PYG{p}{]}\PYG{o}{.}\PYG{n}{mean}\PYG{p}{()}
+  \PYG{k}{else}\PYG{p}{:}
+    \PYG{n}{mean\PYGZus{}raiting} \PYG{o}{=} \PYG{l+m+mf}{5.0}
+  \PYG{k}{return} \PYG{n}{mean\PYGZus{}raiting}
+
+\PYG{n}{score}\PYG{p}{(}\PYG{n}{mean\PYGZus{}model}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{}—редневзвешенна€}
+\PYG{c+c1}{\PYGZsh{} ¬ данной модели будем отдавать больше предпочтени€ тем пользовател€м,}
+\PYG{c+c1}{\PYGZsh{} чьи оценки похожи на рассматриваемого пользовател€ больше.}
+\PYG{k+kn}{from} \PYG{n+nn}{sklearn.metrics.pairwise} \PYG{k+kn}{import} \PYG{n}{cosine\PYGZus{}similarity}
+
+\PYG{c+c1}{\PYGZsh{}‘ункци€ cosine\PYGZus{}similarity не работает со значени€ми Nan. ѕоэтому заменим их на 0.}
+\PYG{n}{r\PYGZus{}matrix\PYGZus{}notnull} \PYG{o}{=} \PYG{n}{r\PYGZus{}matrix}\PYG{o}{.}\PYG{n}{copy}\PYG{p}{()}\PYG{o}{.}\PYG{n}{fillna}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)}
+\PYG{n}{cosine\PYGZus{}sim} \PYG{o}{=} \PYG{n}{cosine\PYGZus{}similarity}\PYG{p}{(}\PYG{n}{r\PYGZus{}matrix\PYGZus{}notnull}\PYG{p}{,} \PYG{n}{r\PYGZus{}matrix\PYGZus{}notnull}\PYG{p}{)}
+
+\PYG{n}{cosine\PYGZus{}sim} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{p}{(}\PYG{n}{cosine\PYGZus{}sim}\PYG{p}{,} \PYG{n}{index}\PYG{o}{=}\PYG{n}{r\PYGZus{}matrix}\PYG{o}{.}\PYG{n}{index}\PYG{p}{,} \PYG{n}{columns}\PYG{o}{=}\PYG{n}{r\PYGZus{}matrix}\PYG{o}{.}\PYG{n}{index}\PYG{p}{)}
+
+\PYG{k}{def} \PYG{n+nf}{model\PYGZus{}weightmean}\PYG{p}{(}\PYG{n}{user\PYGZus{}id}\PYG{p}{,} \PYG{n}{anime\PYGZus{}id}\PYG{p}{):}
+
+  \PYG{k}{if} \PYG{n}{anime\PYGZus{}id} \PYG{o+ow}{in} \PYG{n}{r\PYGZus{}matrix}\PYG{p}{:}
+    \PYG{n}{similars} \PYG{o}{=} \PYG{n}{cosine\PYGZus{}sim}\PYG{p}{[}\PYG{n}{user\PYGZus{}id}\PYG{p}{]}
+    \PYG{c+c1}{\PYGZsh{} оценки пользователей дл€ аниме}
+    \PYG{n}{m\PYGZus{}ratings} \PYG{o}{=} \PYG{n}{r\PYGZus{}matrix}\PYG{p}{[}\PYG{n}{anime\PYGZus{}id}\PYG{p}{]}
+    \PYG{c+c1}{\PYGZsh{} запишем индексы тех элементов, что имеют нулевое косинусное сходство}
+    \PYG{n}{idx} \PYG{o}{=} \PYG{n}{m\PYGZus{}ratings}\PYG{p}{[}\PYG{n}{m\PYGZus{}ratings}\PYG{o}{.}\PYG{n}{isnull}\PYG{p}{()]}\PYG{o}{.}\PYG{n}{index}
+    \PYG{c+c1}{\PYGZsh{}удалим оценки, которые содержат Nan}
+    \PYG{n}{m\PYGZus{}ratings} \PYG{o}{=} \PYG{n}{m\PYGZus{}ratings}\PYG{o}{.}\PYG{n}{dropna}\PYG{p}{()}
+    \PYG{c+c1}{\PYGZsh{} удалим косинусное сходство элементов, которые содержат Nan}
+    \PYG{n}{similars} \PYG{o}{=} \PYG{n}{similars}\PYG{o}{.}\PYG{n}{drop}\PYG{p}{(}\PYG{n}{idx}\PYG{p}{)}
+    \PYG{c+c1}{\PYGZsh{} расчитаем средневзвешенное по формуле}
+    \PYG{n}{weightmean} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{dot}\PYG{p}{(}\PYG{n}{similars}\PYG{p}{,} \PYG{n}{m\PYGZus{}ratings}\PYG{p}{)}\PYG{o}{/} \PYG{n}{similars}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{()}
+  \PYG{k}{else}\PYG{p}{:}
+    \PYG{n}{weightmean} \PYG{o}{=} \PYG{l+m+mf}{5.0}
+  \PYG{k}{return} \PYG{n}{weightmean}
+
+\PYG{n}{score}\PYG{p}{(}\PYG{n}{model\PYGZus{}weightmean}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{}  ластеризаци€}
+\PYG{k+kn}{from} \PYG{n+nn}{sklearn.neighbors} \PYG{k+kn}{import} \PYG{n}{KNeighborsRegressor}
+\PYG{k+kn}{from} \PYG{n+nn}{sklearn.model\PYGZus{}selection} \PYG{k+kn}{import} \PYG{n}{GridSearchCV}
+
+\PYG{n}{knn} \PYG{o}{=} \PYG{n}{KNeighborsRegressor}\PYG{p}{()}
+
+\PYG{n}{param\PYGZus{}grid} \PYG{o}{=} \PYG{p}{[}
+\PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}n\PYGZus{}neighbors\PYGZsq{}}\PYG{p}{:} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{),} \PYG{l+s+s1}{\PYGZsq{}metric\PYGZsq{}} \PYG{p}{:} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}cosine\PYGZsq{}}\PYG{p}{]\PYGZcb{},}
+\PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}n\PYGZus{}neighbors\PYGZsq{}}\PYG{p}{:} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{),} \PYG{l+s+s1}{\PYGZsq{}metric\PYGZsq{}} \PYG{p}{:} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}minkowski\PYGZsq{}}\PYG{p}{],}
+\PYG{l+s+s1}{\PYGZsq{}p\PYGZsq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{]\PYGZcb{},}
+\PYG{p}{]}
+\PYG{n}{grid\PYGZus{}search} \PYG{o}{=} \PYG{n}{GridSearchCV}\PYG{p}{(}\PYG{n}{knn}\PYG{p}{,} \PYG{n}{param\PYGZus{}grid}\PYG{p}{,} \PYG{n}{cv}\PYG{o}{=}\PYG{l+m+mi}{5}\PYG{p}{,} \PYG{n}{n\PYGZus{}jobs} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{verbose} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{n}{best\PYGZus{}model} \PYG{o}{=} \PYG{n}{grid\PYGZus{}search}\PYG{o}{.}\PYG{n}{fit}\PYG{p}{(}\PYG{n}{X\PYGZus{}train}\PYG{p}{,} \PYG{n}{y\PYGZus{}train}\PYG{p}{)}
+
+\PYG{n}{y\PYGZus{}true} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{n}{X\PYGZus{}test}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}rating\PYGZsq{}}\PYG{p}{])}
+\PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{n}{X\PYGZus{}test}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}rating\PYGZsq{}}\PYG{p}{])}
+\PYG{n}{y\PYGZus{}pred} \PYG{o}{=} \PYG{n}{best\PYGZus{}model}\PYG{o}{.}\PYG{n}{predict}\PYG{p}{(}\PYG{n}{X\PYGZus{}test}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{}обучим с подобранными параметрами}
+\PYG{n}{knn} \PYG{o}{=} \PYG{n}{KNeighborsRegressor}\PYG{p}{(}\PYG{n}{metric}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}cosine\PYGZsq{}}\PYG{p}{,} \PYG{n}{p} \PYG{o}{=} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{n}{n\PYGZus{}neighbors}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}
+
+\PYG{n}{n\PYGZus{}knn} \PYG{o}{=} \PYG{n}{knn}\PYG{o}{.}\PYG{n}{fit}\PYG{p}{(}\PYG{n}{X\PYGZus{}train}\PYG{p}{,} \PYG{n}{y\PYGZus{}train}\PYG{p}{)}
+\PYG{k}{def} \PYG{n+nf}{predict}\PYG{p}{(}\PYG{n}{user\PYGZus{}id}\PYG{p}{):}
+  \PYG{c+c1}{\PYGZsh{} находим оцененные аниме нашего пользоватле€}
+  \PYG{n}{test\PYGZus{}set} \PYG{o}{=} \PYG{n}{X}\PYG{p}{[}\PYG{n}{X}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}user\PYGZus{}id\PYGZsq{}}\PYG{p}{]} \PYG{o}{==} \PYG{n}{user\PYGZus{}id}\PYG{p}{]}
+  \PYG{c+c1}{\PYGZsh{} выводим из обученного Knn рассто€ни€ и индексы схожих аниме}
+  \PYG{n}{distances}\PYG{p}{,} \PYG{n}{indeces} \PYG{o}{=}  \PYG{n}{n\PYGZus{}knn}\PYG{o}{.}\PYG{n}{kneighbors}\PYG{p}{(}\PYG{n}{test\PYGZus{}set}\PYG{p}{)}
+  \PYG{c+c1}{\PYGZsh{} создаем таблицу с расто€ни€ми и индексами}
+  \PYG{n}{final\PYGZus{}table} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{p}{(}\PYG{n}{distances}\PYG{p}{,} \PYG{n}{columns} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}distance\PYGZsq{}}\PYG{p}{])}
+  \PYG{n}{final\PYGZus{}table}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}index\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{indeces}
+  \PYG{n}{final\PYGZus{}table} \PYG{o}{=} \PYG{n}{final\PYGZus{}table}\PYG{o}{.}\PYG{n}{set\PYGZus{}index}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}index\PYGZsq{}}\PYG{p}{)}
+  \PYG{c+c1}{\PYGZsh{} добавл€ем в таблицу название, оценку и жанр}
+  \PYG{n}{result} \PYG{o}{=} \PYG{n}{final\PYGZus{}table}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{X\PYGZus{}train}\PYG{p}{,}\PYG{n}{on}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}index\PYGZsq{}}\PYG{p}{)}
+  \PYG{n}{result} \PYG{o}{=} \PYG{n}{result}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{synopsis\PYGZus{}df}\PYG{p}{,} \PYG{n}{on}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}anime\PYGZus{}id\PYGZsq{}}\PYG{p}{)}
+  \PYG{c+c1}{\PYGZsh{} выводим 5 значений}
+  \PYG{k}{return} \PYG{n}{result}\PYG{p}{[[}\PYG{l+s+s1}{\PYGZsq{}distance\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}Name\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Score\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Genres\PYGZsq{}}\PYG{p}{]]}\PYG{o}{.}\PYG{n}{head}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{)}
+\end{Verbatim}

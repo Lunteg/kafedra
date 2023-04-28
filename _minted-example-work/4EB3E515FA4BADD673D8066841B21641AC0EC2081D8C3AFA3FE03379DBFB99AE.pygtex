@@ -1,0 +1,95 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+	\PYG{c+c1}{\PYGZsh{}из модели извлекаем веса для аниме и пользователей и сохраняем в переменные}
+\PYG{k}{def} \PYG{n+nf}{extract\PYGZus{}weights}\PYG{p}{(}\PYG{n}{name}\PYG{p}{,} \PYG{n}{model}\PYG{p}{):}
+    \PYG{n}{weight\PYGZus{}layer} \PYG{o}{=} \PYG{n}{model}\PYG{o}{.}\PYG{n}{get\PYGZus{}layer}\PYG{p}{(}\PYG{n}{name}\PYG{p}{)}
+    \PYG{n}{weights} \PYG{o}{=} \PYG{n}{weight\PYGZus{}layer}\PYG{o}{.}\PYG{n}{get\PYGZus{}weights}\PYG{p}{()[}\PYG{l+m+mi}{0}\PYG{p}{]}
+    \PYG{n}{weights} \PYG{o}{=} \PYG{n}{weights} \PYG{o}{/} \PYG{n}{np}\PYG{o}{.}\PYG{n}{linalg}\PYG{o}{.}\PYG{n}{norm}\PYG{p}{(}\PYG{n}{weights}\PYG{p}{,} \PYG{n}{axis} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{)}\PYG{o}{.}\PYG{n}{reshape}\PYG{p}{((}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{))}
+    \PYG{k}{return} \PYG{n}{weights}
+
+\PYG{n}{anime\PYGZus{}weights} \PYG{o}{=} \PYG{n}{extract\PYGZus{}weights}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}anime\PYGZus{}embedding\PYGZsq{}}\PYG{p}{,} \PYG{n}{model}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} исправляем названия аниме}
+\PYG{k}{def} \PYG{n+nf}{getAnimeName}\PYG{p}{(}\PYG{n}{anime\PYGZus{}id}\PYG{p}{):}
+    \PYG{c+c1}{\PYGZsh{}если нет названия аниме на английском, то ставим японское название}
+    \PYG{n}{name} \PYG{o}{=} \PYG{n}{df\PYGZus{}anime}\PYG{p}{[}\PYG{n}{df}\PYG{o}{.}\PYG{n}{anime\PYGZus{}id} \PYG{o}{==} \PYG{n}{anime\PYGZus{}id}\PYG{p}{]}\PYG{o}{.}\PYG{n}{eng\PYGZus{}version}\PYG{o}{.}\PYG{n}{values}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+    \PYG{k}{if} \PYG{n}{name} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}Unknown\PYGZdq{}}\PYG{p}{:}
+        \PYG{n}{name} \PYG{o}{=} \PYG{n}{df\PYGZus{}anime}\PYG{p}{[}\PYG{n}{df}\PYG{o}{.}\PYG{n}{anime\PYGZus{}id} \PYG{o}{==} \PYG{n}{anime\PYGZus{}id}\PYG{p}{]}\PYG{o}{.}\PYG{n}{Name}\PYG{o}{.}\PYG{n}{values}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+    \PYG{k}{return} \PYG{n}{name}
+\PYG{c+c1}{\PYGZsh{}переименовываем столбцы}
+\PYG{n}{df\PYGZus{}anime}\PYG{o}{.}\PYG{n}{rename}\PYG{p}{(}\PYG{n}{columns}\PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}MAL\PYGZus{}ID\PYGZsq{}}\PYG{p}{:}\PYG{l+s+s1}{\PYGZsq{}anime\PYGZus{}id\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}English name\PYGZsq{}}\PYG{p}{:}\PYG{l+s+s1}{\PYGZsq{}eng\PYGZus{}version\PYGZsq{}}\PYG{p}{\PYGZcb{},} \PYG{n}{inplace} \PYG{o}{=} \PYG{k+kc}{True}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{}применяем функцию для исправления названия аниме}
+\PYG{n}{df\PYGZus{}anime}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}eng\PYGZus{}version\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{df\PYGZus{}anime}\PYG{o}{.}\PYG{n}{anime\PYGZus{}id}\PYG{o}{.}\PYG{n}{apply}\PYG{p}{(}\PYG{k}{lambda} \PYG{n}{x}\PYG{p}{:} \PYG{n}{getAnimeName}\PYG{p}{(}\PYG{n}{x}\PYG{p}{))}
+\PYG{c+c1}{\PYGZsh{}сортируем аниме по средней оценке аниме от всех пользователей в базе данных}
+\PYG{n}{df\PYGZus{}anime}\PYG{o}{.}\PYG{n}{sort\PYGZus{}values}\PYG{p}{(}\PYG{n}{by}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}Score\PYGZsq{}}\PYG{p}{],}
+               \PYG{n}{inplace}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{,}
+               \PYG{n}{ascending}\PYG{o}{=}\PYG{k+kc}{False}\PYG{p}{,}
+               \PYG{n}{kind}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}quicksort\PYGZsq{}}\PYG{p}{,}
+               \PYG{n}{na\PYGZus{}position}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}last\PYGZsq{}}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{}оставляем нужные столбцы}
+\PYG{n}{df\PYGZus{}anime} \PYG{o}{=} \PYG{n}{df\PYGZus{}anime}\PYG{p}{[[}\PYG{l+s+s2}{\PYGZdq{}anime\PYGZus{}id\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}eng\PYGZus{}version\PYGZdq{}}\PYG{p}{,}
+         \PYG{l+s+s2}{\PYGZdq{}Score\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Genres\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Episodes\PYGZdq{}}\PYG{p}{,}
+         \PYG{l+s+s2}{\PYGZdq{}Type\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Premiered\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Members\PYGZdq{}}\PYG{p}{]]}
+
+\PYG{c+c1}{\PYGZsh{}функция для получения строки с аниме по названию или id}
+\PYG{k}{def} \PYG{n+nf}{getAnimeFrame}\PYG{p}{(}\PYG{n}{anime}\PYG{p}{):}
+    \PYG{k}{if} \PYG{n+nb}{isinstance}\PYG{p}{(}\PYG{n}{anime}\PYG{p}{,} \PYG{n+nb}{int}\PYG{p}{):}
+        \PYG{k}{return} \PYG{n}{df}\PYG{p}{[}\PYG{n}{df}\PYG{o}{.}\PYG{n}{anime\PYGZus{}id} \PYG{o}{==} \PYG{n}{anime}\PYG{p}{]}
+    \PYG{k}{if} \PYG{n+nb}{isinstance}\PYG{p}{(}\PYG{n}{anime}\PYG{p}{,} \PYG{n+nb}{str}\PYG{p}{):}
+        \PYG{k}{return} \PYG{n}{df}\PYG{p}{[}\PYG{n}{df}\PYG{o}{.}\PYG{n}{eng\PYGZus{}version} \PYG{o}{==} \PYG{n}{anime}\PYG{p}{]}
+
+\PYG{n}{cols} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}MAL\PYGZus{}ID\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Name\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Genres\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}sypnopsis\PYGZdq{}}\PYG{p}{]}
+
+\PYG{c+c1}{\PYGZsh{}функция для получения строки с описанием аниме по названию или id}
+\PYG{k}{def} \PYG{n+nf}{getSypnopsis}\PYG{p}{(}\PYG{n}{anime}\PYG{p}{):}
+    \PYG{k}{if} \PYG{n+nb}{isinstance}\PYG{p}{(}\PYG{n}{anime}\PYG{p}{,} \PYG{n+nb}{int}\PYG{p}{):}
+        \PYG{k}{return} \PYG{n}{synopsis\PYGZus{}df}\PYG{p}{[}\PYG{n}{synopsis\PYGZus{}df}\PYG{o}{.}\PYG{n}{MAL\PYGZus{}ID} \PYG{o}{==} \PYG{n}{anime}\PYG{p}{]}\PYG{o}{.}\PYG{n}{sypnopsis}\PYG{o}{.}\PYG{n}{values}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+    \PYG{k}{if} \PYG{n+nb}{isinstance}\PYG{p}{(}\PYG{n}{anime}\PYG{p}{,} \PYG{n+nb}{str}\PYG{p}{):}
+        \PYG{k}{return} \PYG{n}{synopsis\PYGZus{}df}\PYG{p}{[}\PYG{n}{synopsis\PYGZus{}df}\PYG{o}{.}\PYG{n}{Name} \PYG{o}{==} \PYG{n}{anime}\PYG{p}{]}\PYG{o}{.}\PYG{n}{sypnopsis}\PYG{o}{.}\PYG{n}{values}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+
+\PYG{c+c1}{\PYGZsh{}функция для вывода рекомендации аниме}
+\PYG{k}{def} \PYG{n+nf}{find\PYGZus{}similar\PYGZus{}animes}\PYG{p}{(}\PYG{n}{name}\PYG{p}{,} \PYG{c+c1}{\PYGZsh{}название аниме или id}
+                        \PYG{n}{n}\PYG{o}{=}\PYG{l+m+mi}{10}\PYG{p}{,} \PYG{c+c1}{\PYGZsh{}количество аниме которые рекомендуем (по умолчанию 10)}
+                        \PYG{n}{return\PYGZus{}dist}\PYG{o}{=}\PYG{k+kc}{False}\PYG{p}{,} \PYG{c+c1}{\PYGZsh{}выводим ли растояние (по умолчанию нет)}
+                        \PYG{n}{neg}\PYG{o}{=}\PYG{k+kc}{False}\PYG{p}{):} \PYG{c+c1}{\PYGZsh{}в каком порядке выводим список}
+    \PYG{k}{try}\PYG{p}{:}
+        \PYG{c+c1}{\PYGZsh{}записываем в переменные id аниме и вес}
+        \PYG{n}{index} \PYG{o}{=} \PYG{n}{getAnimeFrame}\PYG{p}{(}\PYG{n}{name}\PYG{p}{)}\PYG{o}{.}\PYG{n}{anime\PYGZus{}id}\PYG{o}{.}\PYG{n}{values}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+        \PYG{n}{weights} \PYG{o}{=} \PYG{n}{anime\PYGZus{}weights}
+        \PYG{c+c1}{\PYGZsh{}умножаем вектор со всеми весами на вес текущего аниме для нахождения вектора расстояний}
+        \PYG{n}{dists} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{dot}\PYG{p}{(}\PYG{n}{weights}\PYG{p}{,} \PYG{n}{weights}\PYG{p}{[}\PYG{n}{index}\PYG{p}{])}
+        \PYG{c+c1}{\PYGZsh{}сортируем его}
+        \PYG{n}{sorted\PYGZus{}dists} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{argsort}\PYG{p}{(}\PYG{n}{dists}\PYG{p}{)}
+        \PYG{c+c1}{\PYGZsh{}выбираем порядок вывода}
+        \PYG{k}{if} \PYG{n}{neg}\PYG{p}{:}
+            \PYG{n}{closest} \PYG{o}{=} \PYG{n}{sorted\PYGZus{}dists}\PYG{p}{[:(}\PYG{n}{n} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{)]}
+        \PYG{k}{else}\PYG{p}{:}
+            \PYG{n}{closest} \PYG{o}{=} \PYG{n}{sorted\PYGZus{}dists}\PYG{p}{[(}\PYG{o}{\PYGZhy{}}\PYG{n}{n} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{):]}
+
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}animes closest to }\PYG{l+s+si}{\PYGZob{}\PYGZcb{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{o}{.}\PYG{n}{format}\PYG{p}{(}\PYG{n}{name}\PYG{p}{))}
+        \PYG{c+c1}{\PYGZsh{}выводим вектор расстояний если нужно}
+        \PYG{k}{if} \PYG{n}{return\PYGZus{}dist}\PYG{p}{:}
+            \PYG{k}{return} \PYG{n}{dists}\PYG{p}{,} \PYG{n}{closest}
+
+        \PYG{n}{rindex} \PYG{o}{=} \PYG{n}{df}
+
+        \PYG{n}{SimilarityArr} \PYG{o}{=} \PYG{p}{[]}
+
+        \PYG{k}{for} \PYG{n}{close} \PYG{o+ow}{in} \PYG{n}{closest}\PYG{p}{:}
+            \PYG{c+c1}{\PYGZsh{}для каждого аниме из списка берем описание, название, жанры и расстояние}
+            \PYG{n}{sypnopsis} \PYG{o}{=} \PYG{n}{getSypnopsis}\PYG{p}{(}\PYG{n}{index}\PYG{p}{)}
+            \PYG{n}{anime\PYGZus{}frame} \PYG{o}{=} \PYG{n}{getAnimeFrame}\PYG{p}{(}\PYG{n}{index}\PYG{p}{)}
+
+            \PYG{n}{anime\PYGZus{}name} \PYG{o}{=} \PYG{n}{anime\PYGZus{}frame}\PYG{o}{.}\PYG{n}{eng\PYGZus{}version}\PYG{o}{.}\PYG{n}{values}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+            \PYG{n}{genre} \PYG{o}{=} \PYG{n}{anime\PYGZus{}frame}\PYG{o}{.}\PYG{n}{Genres}\PYG{o}{.}\PYG{n}{values}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+            \PYG{n}{similarity} \PYG{o}{=} \PYG{n}{dists}\PYG{p}{[}\PYG{n}{close}\PYG{p}{]}
+            \PYG{c+c1}{\PYGZsh{}после записываем в список параметры}
+            \PYG{n}{SimilarityArr}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}anime\PYGZus{}id\PYGZdq{}}\PYG{p}{:} \PYG{n}{decoded\PYGZus{}id}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}name\PYGZdq{}}\PYG{p}{:} \PYG{n}{anime\PYGZus{}name}\PYG{p}{,}
+                                  \PYG{l+s+s2}{\PYGZdq{}similarity\PYGZdq{}}\PYG{p}{:} \PYG{n}{similarity}\PYG{p}{,}\PYG{l+s+s2}{\PYGZdq{}genre\PYGZdq{}}\PYG{p}{:} \PYG{n}{genre}\PYG{p}{,}
+                                  \PYG{l+s+s1}{\PYGZsq{}sypnopsis\PYGZsq{}}\PYG{p}{:} \PYG{n}{sypnopsis}\PYG{p}{\PYGZcb{})}
+        \PYG{c+c1}{\PYGZsh{}сортируем его по расстоянию и возвращаем из функции}
+        \PYG{n}{Frame} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{p}{(}\PYG{n}{SimilarityArr}\PYG{p}{)}\PYG{o}{.}\PYG{n}{sort\PYGZus{}values}\PYG{p}{(}\PYG{n}{by}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}similarity\PYGZdq{}}\PYG{p}{,} \PYG{n}{ascending}\PYG{o}{=}\PYG{k+kc}{False}\PYG{p}{)}
+        \PYG{k}{return} \PYG{n}{Frame}\PYG{p}{[}\PYG{n}{Frame}\PYG{o}{.}\PYG{n}{anime\PYGZus{}id} \PYG{o}{!=} \PYG{n}{index}\PYG{p}{]}\PYG{o}{.}\PYG{n}{drop}\PYG{p}{([}\PYG{l+s+s1}{\PYGZsq{}anime\PYGZus{}id\PYGZsq{}}\PYG{p}{],} \PYG{n}{axis}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}
+
+    \PYG{k}{except}\PYG{p}{:}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+si}{\PYGZob{}\PYGZcb{}}\PYG{l+s+s1}{!, Не найден в Аниме листе\PYGZsq{}}\PYG{o}{.}\PYG{n}{format}\PYG{p}{(}\PYG{n}{name}\PYG{p}{))}
+\end{Verbatim}

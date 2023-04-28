@@ -647,7 +647,7 @@ mean_squared_error(y_true, y_pred, squared=False)
 \end{minted}
 
 Наблюдаем, что RSME, полученный этой моделью, равен 0.94. Это лучший результат, который был достигнут.
-
+Полный код рекомендательной системы методом KNN представлен в приложении \ref{pr1}.
 \subsubsection{Нейронная сеть}
 
 Построение модели нейронной сети, как и описывалось в теории, начинается с уровня \verb|embedding|. Здесь векторы пользователей и аниме уплотняются и преобразуются: 
@@ -770,6 +770,7 @@ tuner.search(X_train_array,
 \end{figure}
 
 Проверка на тестовых данных подтвердила результаты обучения.
+Полный код рекомендательной системы на нейросети представлен в приложении \ref{pr2}.
 
 \subsection{Результаты}
 В результате проделанной работы были изучены и реализованы различные методы построения рекомендательной системы. 
@@ -845,7 +846,7 @@ else:
 	
 \end{figure}
 
-
+Весь код можно посмотреть в приложении \ref{pr3}.
 
 
 \subsubsection{User-based подход в коллаборативном KNN}
@@ -940,125 +941,267 @@ def predict(user_id):
 % Каждая последующая секция документа будет являться приложением
 \appendix
 
-\section{Нумеруемые объекты в приложении}
+\section{Модель на основе среднего значения, средневзвешенной оценки, кластеризации}
 
-\begin{table}[!ht]
-	\footnotesize
-	\caption{Results of pass-fail dictionary reduction with the help
-	of masks} \label{table-2}
-	\begin{tabular}{|p{1.5cm}|
-	                 p{1.5cm}|
-	                 p{1.5cm}|
-	                 p{1.5cm}|
-	                 p{1cm}|
-	                 p{1.5cm}|
-	                 p{1.5cm}|
-	                 p{1cm}|}
-		\hline \centering Circuit & Number of modelled faults & Number of test
-		vectors in the test set & The volume of pass-fail dictionary,
-		\linebreak bit & The volume of found mask & The volume of
-		masked dictionary, \linebreak bit & \raggedright \% of pass-fail dictionary
-		& CPU running time, \linebreak min
-		\\
-		\hline S298 & 177 & 322 & 56994 & 30 & 5310 & 9,32\% & 0,07\\
-		\hline S344 & 240 & 127 & 30480 & 29 & 6960 & 22,83\% & 0,04\\
-		\hline S349 & 243 & 134 & 32562 & 35 & 8505 & 26,12\% & 0,05\\
-		\hline S382 & 190 & 2074 & 394060 & 28 & 5320 & 1,35\% & 0,43\\
-		\hline S386 & 274 & 286 & 78364 & 65 & 17810 & 22,73\% & 0,26\\
-		\hline S400 & 194 & 2214 & 429516 & 32 & 6208 & 1,45\% & 0,99\\
-		\hline S444 & 191 & 2240 & 427840 & 30 & 5730 & 1,34\% & 0,98\\
-		\hline S526 & 138 & 2258 & 311604 & 28 & 3864 & 1,24\% & 0,61\\
-		\hline S641 & 345 & 209 & 72105 & 58 & 20010 & 27,75\% & 0,24\\
-		\hline S713 & 343 & 173 & 59339 & 58 & 19894 & 33,53\% & 0,19\\
-		\hline S820 & 712 & 1115 & 793880 & 147 & 104664 & 13,18\% & 9,09\\
-		\hline S832 & 719 & 1137 & 817503 & 151 & 108569 & 13,28\% & 9,20\\
-		\hline S953 & 326 & 14 & 4564 & 13 & 4238 & 92,86\% & 0,01\\
-		\hline S1423 & 293 & 150 & 43950 & 58 & 16994 & 38,67\% & 0,15\\
-		\hline S1488 & 1359 & 1170 & 1590030 & 158 & 214722 & 13,50\% & 26,69\\
-		\hline
-	\end{tabular}
-\end{table}
+\label{pr1}
+\begin{minted}[fontsize=\small, breaklines=true, linenos]{python}
+#В этой реализации опробуем модель, которая будет выводить 
+#среднюю оценку между всеми пользователями, которые его оценят. Все пользователи будут считаться равными.
+# Иными словами, рейтингу каждого пользователя присваивается равный вес.
 
-\begin{equation}
-  F(x)=\int\limits_a^bf(x)\,dx.
-\end{equation}
+#Учтем случай, что некоторые аниме попали только в тестовый набор: в таком случае как и в "глупой" модели установим рейтинг 5.
+def mean_model(user_id, anime_id):
+  if anime_id in r_matrix:
+    mean_raiting = r_matrix[anime_id].mean()
+  else:
+    mean_raiting = 5.0
+  return mean_raiting
 
+score(mean_model)
 
-\begin{figure}[!ht]
-	\centering
-	\includegraphics[width=6cm]{fig2.png}
-	\caption{\label{fig:f3}%
-	Подпись к рисунку}
-\end{figure}
+#Средневзвешенная
+# В данной модели будем отдавать больше предпочтения тем пользователям,
+# чьи оценки похожи на рассматриваемого пользователя больше.
+from sklearn.metrics.pairwise import cosine_similarity
 
+#Функция cosine_similarity не работает со значениями Nan. Поэтому заменим их на 0.
+r_matrix_notnull = r_matrix.copy().fillna(0)
+cosine_sim = cosine_similarity(r_matrix_notnull, r_matrix_notnull)
 
-\begin{table}[!ht]
-\caption{}
-\begin{tabular}{|c|c|}
-  \hline
-  0 & 1\cr
-  \hline
-  1 & 0\cr
-  \hline
-\end{tabular}
-\end{table}
+cosine_sim = pd.DataFrame(cosine_sim, index=r_matrix.index, columns=r_matrix.index)
 
+def model_weightmean(user_id, anime_id):
 
-\section{Листинг программы}\label{pril-1}
-Код приложения \verb"task.pl".
+  if anime_id in r_matrix:
+    similars = cosine_sim[user_id]
+    # оценки пользователей для аниме
+    m_ratings = r_matrix[anime_id]
+    # запишем индексы тех элементов, что имеют нулевое косинусное сходство
+    idx = m_ratings[m_ratings.isnull()].index
+    #удалим оценки, которые содержат Nan
+    m_ratings = m_ratings.dropna()
+    # удалим косинусное сходство элементов, которые содержат Nan
+    similars = similars.drop(idx)
+    # расчитаем средневзвешенное по формуле
+    weightmean = np.dot(similars, m_ratings)/ similars.sum()
+  else:
+    weightmean = 5.0
+  return weightmean
 
-\VerbatimInput[fontsize=\small, numbers=left, numbersep=2pt]{task.pl}
+score(model_weightmean)
 
+# Кластеризация
+from sklearn.neighbors import KNeighborsRegressor
+from sklearn.model_selection import GridSearchCV
 
+knn = KNeighborsRegressor()
 
-\section{Многостраничная таблица}
+param_grid = [
+{'n_neighbors': range(1, 10, 1), 'metric' : ['cosine']},
+{'n_neighbors': range(1, 10, 1), 'metric' : ['minkowski'],
+'p': [1, 2, 3]},
+]
+grid_search = GridSearchCV(knn, param_grid, cv=5, n_jobs = -1, verbose = 1)
+best_model = grid_search.fit(X_train, y_train)
 
-\noindent
-{\small
-\begin{longtable}[l]{|>{\centering}p{2cm}|
-								     >{\raggedright}p{6cm}|
-								     >{\centering}p{2cm}|
-								     >{\centering}p{2cm}|}
-\caption{ГОСТ DIN ISO "--- Таблица соответствия стандартов}\label{tab:longtab}
-\cr\hline
-\textbf{Стандарт ГОСТ} & \centering\textbf{Наименование} & \textbf{Стандарт DIN} & \textbf{Стандарт ISO} \cr
-\hline
-1 &  \centering 2  & 3  &  4 \endfirsthead
-\caption*{Продолжение таблицы~\ref{tab:longtab}}\cr
-\hline
-1 &  \centering 2  & 3  &  4  \cr\hline\endhead \hline
-ГОСТ 397-79 & Шплинты & DIN 94 & ISO 1234 \cr \hline
-ГОСТ 1144-80 & Шурупы с полукруглой головкой & DIN 96DIN 7981 & ISO 7049 \cr \hline
-ГОСТ 1145-80 & Шурупы с потайной головкой & DIN 97DIN 7982 & ISO 7050 \cr \hline
-ГОСТ 1146-80 & Шурупы с полупотайной головкой & DIN 95DIN 7983 & ISO 7051 \cr \hline
-ГОСТ 1476-93 & Винты установочные с коническим концом и прямым шлицем классов точности А и В & DIN 553 & ISO 7434 \cr \hline
-ГОСТ 1477-93 & Винты установочные с плоским концом и прямым шлицем классов точности А и В & DIN 438DIN 551 & ISO 4766ISO 7436 \cr \hline
-ГОСТ 1478-93 & Винты установочные с цилиндрическим концом и прямым шлицем классов точности А и В & DIN 417 & ISO 7435 \cr \hline
-ГОСТ 1481-84 & Винты установочные с шестигранной головкой и цилиндрическим концом классов точности А и В & DIN 561 & ~ \cr \hline
-ГОСТ 1482-84 & Винты установочные с квадратной головкой и цилиндрическим концом классов точности А и В & DIN 479 & ~ \cr \hline
-ГОСТ 1485-84 & Винты установочные с квадратной головкой и засверленным концом классов точности А и В & DIN 479 & ~ \cr \hline
-ГОСТ 1486-84 & Винты установочные с квадратной головкой и ступенчатым концом со сферой классов точности А и В & DIN 480 & ~ \cr \hline
-ГОСТ 1488-84 & Винты установочные с квадратной головкой и буртиком классов точности А и В & DIN 478 & ~ \cr \hline
-ГОСТ 1491-80 & Винты с цилиндрической головкой классов точности А и В & DIN 84 & ISO 1207 \cr \hline
-ГОСТ 3032-76 & Гайки-барашки & DIN 315 & ~ \cr \hline
-ГОСТ 3033-79 & Болты откидные & DIN 444 & ~ \cr \hline
-ГОСТ 3057-90 & Пружины тарельчатые & DIN 2093 & ~ \cr \hline
-ГОСТ 3070-88 & Канат стальной двойной свивки типа ТК конструкции 6х19 (1+6+12)+1 о.с. & DIN 3060 & ~ \cr \hline
-ГОСТ 3128-70 & Штифты цилиндрические незакаленные & DIN 7DIN 6325 & ISO 2338ISO 8734 \cr \hline
-ГОСТ 3129-70 & Штифты конические незакаленные & DIN 1 & ISO 2339 \cr \hline
-ГОСТ 4751-73 & Рым-болты & DIN 580 & ISO 3266 \cr \hline
-ГОСТ 5915-70 & Гайки шестигранные стальные класса точности В & DIN 555DIN 934 & ISO 4032ISO 4033ISO 8673ISO 8674 \cr \hline
-ГОСТ 5916-70 & Гайки шестигранные низкие класса точности В & DIN 439DIN 936 & ISO 4035ISO 4036ISO 8675 \cr \hline
-ГОСТ 5918-73 & Гайки шестигранные прорезные и корончатые класса точности В & DIN 935 & EN ISO 7035EN ISO 7036EN ISO 7037 \cr \hline
-ГОСТ 5919-73 & Гайки шестигранные прорезные и корончатые низкие класса точности В & DIN 937 & EN ISO 7038 \cr \hline
-ГОСТ 5927-70 & Гайки шестигранные класса точности А & DIN 555DIN 934 & ISO 4032ISO 4034ISO 8673 \cr \hline
-ГОСТ 5932-73 & Гайки шестигранные прорезные и корончатые класса точности А & DIN 935DIN 937 & EN ISO 7035EN ISO 7036EN ISO 7037 \cr \hline
-ГОСТ 6393-73 & Гайки круглые с отверстиями на торце "под ключ" класса точности А & DIN 1816 & ~ \cr \hline
-ГОСТ 6402-70 & Шайбы пружинные & DIN 127 & ~ \cr \hline
-ГОСТ 6958-78 & Шайбы увеличенные. Классы точности А и С & DIN 440DIN 9021 & ISO 7094ISO 7093-1ISO 7093-2 \cr \hline
-ГОСТ 7786-81 & Болты с потайной головкой и квадратным подголовком класса точности С & DIN 608 & ~ \cr \hline
-ГОСТ 7795-70 & Болты с шестигранной уменьшенной головкой и направляющим подголовком, класс точности В & ~ & ~ \cr \hline
-\end{longtable}
-}
+y_true = np.array(X_test['rating'])
+np.array(X_test['rating'])
+y_pred = best_model.predict(X_test)
+
+#обучим с подобранными параметрами
+knn = KNeighborsRegressor(metric='cosine', p = 2, n_neighbors=1)
+
+n_knn = knn.fit(X_train, y_train)
+def predict(user_id):
+  # находим оцененные аниме нашего пользоватлея
+  test_set = X[X['user_id'] == user_id]
+  # выводим из обученного Knn расстояния и индексы схожих аниме
+  distances, indeces =  n_knn.kneighbors(test_set)
+  # создаем таблицу с растояниями и индексами
+  final_table = pd.DataFrame(distances, columns = ['distance'])
+  final_table['index'] = indeces
+  final_table = final_table.set_index('index')
+  # добавляем в таблицу название, оценку и жанр
+  result = final_table.join(X_train,on='index')
+  result = result.join(synopsis_df, on='anime_id')
+  # выводим 5 значений
+  return result[['distance','Name', 'Score', 'Genres']].head(5)
+\end{minted}
+
+\section{Рекомендательная система на нейросети}
+\label{pr2}
+\begin{minted}[fontsize=\small, breaklines=true, linenos]{python}
+import tensorflow as tf
+from tensorflow.keras import layers
+from tensorflow.keras.models import Model
+from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.layers import Add, Activation, Lambda, BatchNormalization, Concatenate, Dropout, Input, Embedding, Dot, Reshape, Dense, Flatten
+from tensorflow.keras.datasets import fashion_mnist
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+from tensorflow.keras import utils
+from keras_tuner.tuners import BayesianOptimization
+import numpy as np
+
+def RecommenderNet(hp):
+    embedding_size = 128
+    user = Input(name = 'user', shape = [1])
+    # Превращает положительные целые числа (индексы) в плотные векторы фиксированного размера.
+    # совершаем эту операцию с обоими стобцами
+    user_embedding = Embedding(name = 'user_embedding',
+                       input_dim = n_users, 
+                       output_dim = embedding_size)(user)
+    
+    anime = Input(name = 'anime', shape = [1])
+    anime_embedding = Embedding(name = 'anime_embedding',
+                       input_dim = n_animes, 
+                       output_dim = embedding_size)(anime)
+    # вычисляем скалярное произведение между двумя получившимися векторами
+    x = Dot(name = 'dot_product', normalize = True, axes = 2)([user_embedding, anime_embedding])
+    # выравниваем массив выборки, превращая его из вида (x, y) (x * y = размер батча) в (x * y)
+    x = Flatten()(x)
+    # используем стандартный инициализатор 
+    x = Dense(1, kernel_initializer='he_normal')(x)
+    # нормализируем батчи
+    x = BatchNormalization()(x)
+    # в качестве функции активации используем сигмоиду
+    # мы могли бы использовать другие функции активации
+    # но при первом запуске всех допустимых функций (relu, elu и тд)
+    # сигмоида сильно лучше работала, а время обучение составляло слишком большое число (порядка 6-ти часов)
+    # поэтому было принято решения использовать только сигмоиду
+    x = Activation(hp.Choice('activation', values=['sigmoid']))(x)
+    
+    model = Model(inputs=[user, anime], outputs=x)
+    # компилируем, в качестве метрики используем mae и mse, в качестве оптимизатора - подбираем один из трех
+    model.compile(loss='binary_crossentropy', metrics=["mae", "mse"], optimizer=hp.Choice('optimizer', values=['adam','rmsprop','SGD']))
+    
+    return model
+
+	tuner = BayesianOptimization(
+    RecommenderNet,                 # функция создания модели
+    objective='val_mse',    # метрика, которую нужно оптимизировать -                             
+    max_trials=10,               # максимальное количество запусков обучения 
+    directory='test_directory'   # каталог, куда сохраняются обученные сети  
+    )
+
+	tuner.search_space_summary()
+
+		# обучение модели
+	batch_size = 10000 # тк размер выборки большой, выбираем батчи размером 10к
+	tuner.search(X_train_array,                  # Данные для обучения
+				y_train,                  # Правильные ответы
+				batch_size=10000,           # Размер мини-выборки
+				epochs=10,                # Количество эпох обучения 
+				validation_split=0.2,    # Часть данных, которая будет использоваться для проверки
+				)
+
+	
+	models = tuner.get_best_models(num_models=3)
+
+	for model in models:
+		model.summary()
+		model.evaluate(X_test_array, y_test)
+		print() 
+
+\end{minted}
+
+\section{Функция предсказания от нейросети}
+\label{pr3}
+\begin{minted}[fontsize=\small, breaklines=true, linenos]{python}
+	#из модели извлекаем веса для аниме и пользователей и сохраняем в переменные
+def extract_weights(name, model):
+    weight_layer = model.get_layer(name)
+    weights = weight_layer.get_weights()[0]
+    weights = weights / np.linalg.norm(weights, axis = 1).reshape((-1, 1))
+    return weights
+
+anime_weights = extract_weights('anime_embedding', model)
+
+# исправляем названия аниме
+def getAnimeName(anime_id):
+    #если нет названия аниме на английском, то ставим японское название
+    name = df_anime[df.anime_id == anime_id].eng_version.values[0]
+    if name == "Unknown":
+        name = df_anime[df.anime_id == anime_id].Name.values[0] 
+    return name
+#переименовываем столбцы
+df_anime.rename(columns= {'MAL_ID':'anime_id','English name':'eng_version'}, inplace = True)
+#применяем функцию для исправления названия аниме
+df_anime['eng_version'] = df_anime.anime_id.apply(lambda x: getAnimeName(x))
+#сортируем аниме по средней оценке аниме от всех пользователей в базе данных 
+df_anime.sort_values(by=['Score'], 
+               inplace=True,
+               ascending=False, 
+               kind='quicksort',
+               na_position='last')
+#оставляем нужные столбцы
+df_anime = df_anime[["anime_id", "eng_version", 
+         "Score", "Genres", "Episodes", 
+         "Type", "Premiered", "Members"]]
+
+#функция для получения строки с аниме по названию или id
+def getAnimeFrame(anime):
+    if isinstance(anime, int):
+        return df[df.anime_id == anime]
+    if isinstance(anime, str):
+        return df[df.eng_version == anime]
+
+cols = ["MAL_ID", "Name", "Genres", "sypnopsis"]
+
+#функция для получения строки с описанием аниме по названию или id
+def getSypnopsis(anime):
+    if isinstance(anime, int):
+        return synopsis_df[synopsis_df.MAL_ID == anime].sypnopsis.values[0]
+    if isinstance(anime, str):
+        return synopsis_df[synopsis_df.Name == anime].sypnopsis.values[0]
+
+#функция для вывода рекомендации аниме
+def find_similar_animes(name, #название аниме или id
+                        n=10, #количество аниме которые рекомендуем (по умолчанию 10)
+                        return_dist=False, #выводим ли растояние (по умолчанию нет)
+                        neg=False): #в каком порядке выводим список
+    try:
+        #записываем в переменные id аниме и вес
+        index = getAnimeFrame(name).anime_id.values[0]
+        weights = anime_weights
+        #умножаем вектор со всеми весами на вес текущего аниме для нахождения вектора расстояний
+        dists = np.dot(weights, weights[index])
+        #сортируем его
+        sorted_dists = np.argsort(dists)          
+        #выбираем порядок вывода
+        if neg:
+            closest = sorted_dists[:(n + 1)]
+        else:
+            closest = sorted_dists[(-n - 1):]
+
+        print('animes closest to {}'.format(name))
+        #выводим вектор расстояний если нужно
+        if return_dist:
+            return dists, closest
+        
+        rindex = df
+
+        SimilarityArr = []
+
+        for close in closest:
+            #для каждого аниме из списка берем описание, название, жанры и расстояние
+            sypnopsis = getSypnopsis(index)
+            anime_frame = getAnimeFrame(index)
+            
+            anime_name = anime_frame.eng_version.values[0]
+            genre = anime_frame.Genres.values[0]
+            similarity = dists[close]
+            #после записываем в список параметры
+            SimilarityArr.append({"anime_id": decoded_id, "name": anime_name,
+                                  "similarity": similarity,"genre": genre,
+                                  'sypnopsis': sypnopsis})
+        #сортируем его по расстоянию и возвращаем из функции
+        Frame = pd.DataFrame(SimilarityArr).sort_values(by="similarity", ascending=False)
+        return Frame[Frame.anime_id != index].drop(['anime_id'], axis=1)
+
+    except:
+        print('{}!, Не найден в Аниме листе'.format(name))
+\end{minted}
+
 
 \end{document}

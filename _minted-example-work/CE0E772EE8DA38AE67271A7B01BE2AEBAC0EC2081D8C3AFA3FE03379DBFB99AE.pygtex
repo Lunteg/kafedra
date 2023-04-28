@@ -1,0 +1,74 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{tensorflow} \PYG{k}{as} \PYG{n+nn}{tf}
+\PYG{k+kn}{from} \PYG{n+nn}{tensorflow.keras} \PYG{k+kn}{import} \PYG{n}{layers}
+\PYG{k+kn}{from} \PYG{n+nn}{tensorflow.keras.models} \PYG{k+kn}{import} \PYG{n}{Model}
+\PYG{k+kn}{from} \PYG{n+nn}{tensorflow.keras.optimizers} \PYG{k+kn}{import} \PYG{n}{Adam}
+\PYG{k+kn}{from} \PYG{n+nn}{tensorflow.keras.layers} \PYG{k+kn}{import} \PYG{n}{Add}\PYG{p}{,} \PYG{n}{Activation}\PYG{p}{,} \PYG{n}{Lambda}\PYG{p}{,} \PYG{n}{BatchNormalization}\PYG{p}{,} \PYG{n}{Concatenate}\PYG{p}{,} \PYG{n}{Dropout}\PYG{p}{,} \PYG{n}{Input}\PYG{p}{,} \PYG{n}{Embedding}\PYG{p}{,} \PYG{n}{Dot}\PYG{p}{,} \PYG{n}{Reshape}\PYG{p}{,} \PYG{n}{Dense}\PYG{p}{,} \PYG{n}{Flatten}
+\PYG{k+kn}{from} \PYG{n+nn}{tensorflow.keras.datasets} \PYG{k+kn}{import} \PYG{n}{fashion\PYGZus{}mnist}
+\PYG{k+kn}{from} \PYG{n+nn}{tensorflow.keras.models} \PYG{k+kn}{import} \PYG{n}{Sequential}
+\PYG{k+kn}{from} \PYG{n+nn}{tensorflow.keras.layers} \PYG{k+kn}{import} \PYG{n}{Dense}
+\PYG{k+kn}{from} \PYG{n+nn}{tensorflow.keras} \PYG{k+kn}{import} \PYG{n}{utils}
+\PYG{k+kn}{from} \PYG{n+nn}{keras\PYGZus{}tuner.tuners} \PYG{k+kn}{import} \PYG{n}{BayesianOptimization}
+\PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+
+\PYG{k}{def} \PYG{n+nf}{RecommenderNet}\PYG{p}{(}\PYG{n}{hp}\PYG{p}{):}
+    \PYG{n}{embedding\PYGZus{}size} \PYG{o}{=} \PYG{l+m+mi}{128}
+    \PYG{n}{user} \PYG{o}{=} \PYG{n}{Input}\PYG{p}{(}\PYG{n}{name} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}user\PYGZsq{}}\PYG{p}{,} \PYG{n}{shape} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{])}
+    \PYG{c+c1}{\PYGZsh{} Превращает положительные целые числа (индексы) в плотные векторы фиксированного размера.}
+    \PYG{c+c1}{\PYGZsh{} совершаем эту операцию с обоими стобцами}
+    \PYG{n}{user\PYGZus{}embedding} \PYG{o}{=} \PYG{n}{Embedding}\PYG{p}{(}\PYG{n}{name} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}user\PYGZus{}embedding\PYGZsq{}}\PYG{p}{,}
+                       \PYG{n}{input\PYGZus{}dim} \PYG{o}{=} \PYG{n}{n\PYGZus{}users}\PYG{p}{,}
+                       \PYG{n}{output\PYGZus{}dim} \PYG{o}{=} \PYG{n}{embedding\PYGZus{}size}\PYG{p}{)(}\PYG{n}{user}\PYG{p}{)}
+
+    \PYG{n}{anime} \PYG{o}{=} \PYG{n}{Input}\PYG{p}{(}\PYG{n}{name} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}anime\PYGZsq{}}\PYG{p}{,} \PYG{n}{shape} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{])}
+    \PYG{n}{anime\PYGZus{}embedding} \PYG{o}{=} \PYG{n}{Embedding}\PYG{p}{(}\PYG{n}{name} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}anime\PYGZus{}embedding\PYGZsq{}}\PYG{p}{,}
+                       \PYG{n}{input\PYGZus{}dim} \PYG{o}{=} \PYG{n}{n\PYGZus{}animes}\PYG{p}{,}
+                       \PYG{n}{output\PYGZus{}dim} \PYG{o}{=} \PYG{n}{embedding\PYGZus{}size}\PYG{p}{)(}\PYG{n}{anime}\PYG{p}{)}
+    \PYG{c+c1}{\PYGZsh{} вычисляем скалярное произведение между двумя получившимися векторами}
+    \PYG{n}{x} \PYG{o}{=} \PYG{n}{Dot}\PYG{p}{(}\PYG{n}{name} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}dot\PYGZus{}product\PYGZsq{}}\PYG{p}{,} \PYG{n}{normalize} \PYG{o}{=} \PYG{k+kc}{True}\PYG{p}{,} \PYG{n}{axes} \PYG{o}{=} \PYG{l+m+mi}{2}\PYG{p}{)([}\PYG{n}{user\PYGZus{}embedding}\PYG{p}{,} \PYG{n}{anime\PYGZus{}embedding}\PYG{p}{])}
+    \PYG{c+c1}{\PYGZsh{} выравниваем массив выборки, превращая его из вида (x, y) (x * y = размер батча) в (x * y)}
+    \PYG{n}{x} \PYG{o}{=} \PYG{n}{Flatten}\PYG{p}{()(}\PYG{n}{x}\PYG{p}{)}
+    \PYG{c+c1}{\PYGZsh{} используем стандартный инициализатор}
+    \PYG{n}{x} \PYG{o}{=} \PYG{n}{Dense}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{kernel\PYGZus{}initializer}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}he\PYGZus{}normal\PYGZsq{}}\PYG{p}{)(}\PYG{n}{x}\PYG{p}{)}
+    \PYG{c+c1}{\PYGZsh{} нормализируем батчи}
+    \PYG{n}{x} \PYG{o}{=} \PYG{n}{BatchNormalization}\PYG{p}{()(}\PYG{n}{x}\PYG{p}{)}
+    \PYG{c+c1}{\PYGZsh{} в качестве функции активации используем сигмоиду}
+    \PYG{c+c1}{\PYGZsh{} мы могли бы использовать другие функции активации}
+    \PYG{c+c1}{\PYGZsh{} но при первом запуске всех допустимых функций (relu, elu и тд)}
+    \PYG{c+c1}{\PYGZsh{} сигмоида сильно лучше работала, а время обучение составляло слишком большое число (порядка 6\PYGZhy{}ти часов)}
+    \PYG{c+c1}{\PYGZsh{} поэтому было принято решения использовать только сигмоиду}
+    \PYG{n}{x} \PYG{o}{=} \PYG{n}{Activation}\PYG{p}{(}\PYG{n}{hp}\PYG{o}{.}\PYG{n}{Choice}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}activation\PYGZsq{}}\PYG{p}{,} \PYG{n}{values}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}sigmoid\PYGZsq{}}\PYG{p}{]))(}\PYG{n}{x}\PYG{p}{)}
+
+    \PYG{n}{model} \PYG{o}{=} \PYG{n}{Model}\PYG{p}{(}\PYG{n}{inputs}\PYG{o}{=}\PYG{p}{[}\PYG{n}{user}\PYG{p}{,} \PYG{n}{anime}\PYG{p}{],} \PYG{n}{outputs}\PYG{o}{=}\PYG{n}{x}\PYG{p}{)}
+    \PYG{c+c1}{\PYGZsh{} компилируем, в качестве метрики используем mae и mse, в качестве оптимизатора \PYGZhy{} подбираем один из трех}
+    \PYG{n}{model}\PYG{o}{.}\PYG{n}{compile}\PYG{p}{(}\PYG{n}{loss}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}binary\PYGZus{}crossentropy\PYGZsq{}}\PYG{p}{,} \PYG{n}{metrics}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}mae\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}mse\PYGZdq{}}\PYG{p}{],} \PYG{n}{optimizer}\PYG{o}{=}\PYG{n}{hp}\PYG{o}{.}\PYG{n}{Choice}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}optimizer\PYGZsq{}}\PYG{p}{,} \PYG{n}{values}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}adam\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}rmsprop\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}SGD\PYGZsq{}}\PYG{p}{]))}
+
+    \PYG{k}{return} \PYG{n}{model}
+
+	\PYG{n}{tuner} \PYG{o}{=} \PYG{n}{BayesianOptimization}\PYG{p}{(}
+    \PYG{n}{RecommenderNet}\PYG{p}{,}                 \PYG{c+c1}{\PYGZsh{} функция создания модели}
+    \PYG{n}{objective}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}val\PYGZus{}mse\PYGZsq{}}\PYG{p}{,}    \PYG{c+c1}{\PYGZsh{} метрика, которую нужно оптимизировать \PYGZhy{}}
+    \PYG{n}{max\PYGZus{}trials}\PYG{o}{=}\PYG{l+m+mi}{10}\PYG{p}{,}               \PYG{c+c1}{\PYGZsh{} максимальное количество запусков обучения}
+    \PYG{n}{directory}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}test\PYGZus{}directory\PYGZsq{}}   \PYG{c+c1}{\PYGZsh{} каталог, куда сохраняются обученные сети}
+    \PYG{p}{)}
+
+	\PYG{n}{tuner}\PYG{o}{.}\PYG{n}{search\PYGZus{}space\PYGZus{}summary}\PYG{p}{()}
+
+		\PYG{c+c1}{\PYGZsh{} обучение модели}
+	\PYG{n}{batch\PYGZus{}size} \PYG{o}{=} \PYG{l+m+mi}{10000} \PYG{c+c1}{\PYGZsh{} тк размер выборки большой, выбираем батчи размером 10к}
+	\PYG{n}{tuner}\PYG{o}{.}\PYG{n}{search}\PYG{p}{(}\PYG{n}{X\PYGZus{}train\PYGZus{}array}\PYG{p}{,}                  \PYG{c+c1}{\PYGZsh{} Данные для обучения}
+				\PYG{n}{y\PYGZus{}train}\PYG{p}{,}                  \PYG{c+c1}{\PYGZsh{} Правильные ответы}
+				\PYG{n}{batch\PYGZus{}size}\PYG{o}{=}\PYG{l+m+mi}{10000}\PYG{p}{,}           \PYG{c+c1}{\PYGZsh{} Размер мини\PYGZhy{}выборки}
+				\PYG{n}{epochs}\PYG{o}{=}\PYG{l+m+mi}{10}\PYG{p}{,}                \PYG{c+c1}{\PYGZsh{} Количество эпох обучения}
+				\PYG{n}{validation\PYGZus{}split}\PYG{o}{=}\PYG{l+m+mf}{0.2}\PYG{p}{,}    \PYG{c+c1}{\PYGZsh{} Часть данных, которая будет использоваться для проверки}
+				\PYG{p}{)}
+
+	
+	\PYG{n}{models} \PYG{o}{=} \PYG{n}{tuner}\PYG{o}{.}\PYG{n}{get\PYGZus{}best\PYGZus{}models}\PYG{p}{(}\PYG{n}{num\PYGZus{}models}\PYG{o}{=}\PYG{l+m+mi}{3}\PYG{p}{)}
+
+	\PYG{k}{for} \PYG{n}{model} \PYG{o+ow}{in} \PYG{n}{models}\PYG{p}{:}
+		\PYG{n}{model}\PYG{o}{.}\PYG{n}{summary}\PYG{p}{()}
+		\PYG{n}{model}\PYG{o}{.}\PYG{n}{evaluate}\PYG{p}{(}\PYG{n}{X\PYGZus{}test\PYGZus{}array}\PYG{p}{,} \PYG{n}{y\PYGZus{}test}\PYG{p}{)}
+		\PYG{n+nb}{print}\PYG{p}{()}
+
+\end{Verbatim}
