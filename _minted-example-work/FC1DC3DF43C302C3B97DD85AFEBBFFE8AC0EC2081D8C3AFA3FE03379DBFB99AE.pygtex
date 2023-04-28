@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{model\PYGZus{}weightmean}\PYG{p}{(}\PYG{n}{user\PYGZus{}id}\PYG{p}{,} \PYG{n}{anime\PYGZus{}id}\PYG{p}{):}
+\PYG{k+kn}{from} \PYG{n+nn}{sklearn.neighbors} \PYG{k+kn}{import} \PYG{n}{KNeighborsRegressor}
+\PYG{k+kn}{from} \PYG{n+nn}{sklearn.model\PYGZus{}selection} \PYG{k+kn}{import} \PYG{n}{GridSearchCV}
+
+
+\PYG{n}{knn} \PYG{o}{=} \PYG{n}{KNeighborsRegressor}\PYG{p}{()}
+
+
+\PYG{n}{param\PYGZus{}grid} \PYG{o}{=} \PYG{p}{[}
+\PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}n\PYGZus{}neighbors\PYGZsq{}}\PYG{p}{:} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{),} \PYG{l+s+s1}{\PYGZsq{}metric\PYGZsq{}} \PYG{p}{:} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}cosine\PYGZsq{}}\PYG{p}{]\PYGZcb{},}
+\PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}n\PYGZus{}neighbors\PYGZsq{}}\PYG{p}{:} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{),} \PYG{l+s+s1}{\PYGZsq{}metric\PYGZsq{}} \PYG{p}{:} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}minkowski\PYGZsq{}}\PYG{p}{],}
+\PYG{l+s+s1}{\PYGZsq{}p\PYGZsq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{]\PYGZcb{},}
+\PYG{p}{]}
+\PYG{n}{grid\PYGZus{}search} \PYG{o}{=} \PYG{n}{GridSearchCV}\PYG{p}{(}\PYG{n}{knn}\PYG{p}{,} \PYG{n}{param\PYGZus{}grid}\PYG{p}{,} \PYG{n}{cv}\PYG{o}{=}\PYG{l+m+mi}{5}\PYG{p}{,} \PYG{n}{n\PYGZus{}jobs} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{verbose} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{n}{best\PYGZus{}model} \PYG{o}{=} \PYG{n}{grid\PYGZus{}search}\PYG{o}{.}\PYG{n}{fit}\PYG{p}{(}\PYG{n}{X\PYGZus{}train}\PYG{p}{,} \PYG{n}{y\PYGZus{}train}\PYG{p}{)}
+
+\end{Verbatim}

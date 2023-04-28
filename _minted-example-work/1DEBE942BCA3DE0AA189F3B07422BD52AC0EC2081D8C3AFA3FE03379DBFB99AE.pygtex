@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{x} \PYG{o}{=} \PYG{n}{Dot}\PYG{p}{(}\PYG{n}{name} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}dot\PYGZus{}product\PYGZsq{}}\PYG{p}{,} \PYG{n}{normalize} \PYG{o}{=} \PYG{k+kc}{True}\PYG{p}{,} \PYG{n}{axes} \PYG{o}{=} \PYG{l+m+mi}{2}\PYG{p}{)([}\PYG{n}{user\PYGZus{}embedding}\PYG{p}{,} \PYG{n}{anime\PYGZus{}embedding}\PYG{p}{])}
+\PYG{n}{x} \PYG{o}{=} \PYG{n}{Flatten}\PYG{p}{()(}\PYG{n}{x}\PYG{p}{)}
+\end{Verbatim}

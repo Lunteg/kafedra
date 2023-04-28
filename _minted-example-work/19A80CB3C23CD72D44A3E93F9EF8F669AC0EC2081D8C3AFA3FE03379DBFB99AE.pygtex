@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{knn} \PYG{o}{=} \PYG{n}{KNeighborsRegressor}\PYG{p}{(}\PYG{n}{metric}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}cosine\PYGZsq{}}\PYG{p}{,} \PYG{n}{p} \PYG{o}{=} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{n}{n\PYGZus{}neighbors}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{n}{n\PYGZus{}knn} \PYG{o}{=} \PYG{n}{knn}\PYG{o}{.}\PYG{n}{fit}\PYG{p}{(}\PYG{n}{X\PYGZus{}train}\PYG{p}{,} \PYG{n}{y\PYGZus{}train}\PYG{p}{)}
+\PYG{k}{def} \PYG{n+nf}{predict}\PYG{p}{(}\PYG{n}{user\PYGZus{}id}\PYG{p}{):}
+  \PYG{n}{test\PYGZus{}set} \PYG{o}{=} \PYG{n}{X}\PYG{p}{[}\PYG{n}{X}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}user\PYGZus{}id\PYGZsq{}}\PYG{p}{]} \PYG{o}{==} \PYG{n}{user\PYGZus{}id}\PYG{p}{]}
+  \PYG{n}{distances}\PYG{p}{,} \PYG{n}{indeces} \PYG{o}{=}  \PYG{n}{n\PYGZus{}knn}\PYG{o}{.}\PYG{n}{kneighbors}\PYG{p}{(}\PYG{n}{test\PYGZus{}set}\PYG{p}{)}
+  \PYG{n}{final\PYGZus{}table} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{p}{(}\PYG{n}{distances}\PYG{p}{,} \PYG{n}{columns} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}distance\PYGZsq{}}\PYG{p}{])}
+  \PYG{n}{final\PYGZus{}table}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}index\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{indeces}
+  \PYG{n}{final\PYGZus{}table} \PYG{o}{=} \PYG{n}{final\PYGZus{}table}\PYG{o}{.}\PYG{n}{set\PYGZus{}index}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}index\PYGZsq{}}\PYG{p}{)}
+  \PYG{n}{result} \PYG{o}{=} \PYG{n}{final\PYGZus{}table}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{X\PYGZus{}train}\PYG{p}{,}\PYG{n}{on}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}index\PYGZsq{}}\PYG{p}{)}
+  \PYG{n}{result} \PYG{o}{=} \PYG{n}{result}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{synopsis\PYGZus{}df}\PYG{p}{,} \PYG{n}{on}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}anime\PYGZus{}id\PYGZsq{}}\PYG{p}{)}
+  \PYG{k}{return} \PYG{n}{result}\PYG{p}{[[}\PYG{l+s+s1}{\PYGZsq{}distance\PYGZsq{}}\PYG{p}{,}\PYG{l+s+s1}{\PYGZsq{}Name\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Score\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Genres\PYGZsq{}}\PYG{p}{]]}\PYG{o}{.}\PYG{n}{head}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{)}
+\end{Verbatim}

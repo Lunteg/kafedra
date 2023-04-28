@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{sklearn.metrics} \PYG{k+kn}{import} \PYG{n}{mean\PYGZus{}squared\PYGZus{}error}
+\PYG{k}{def} \PYG{n+nf}{score}\PYG{p}{(}\PYG{n}{anime\PYGZus{}model}\PYG{p}{):}
+  \PYG{n}{id\PYGZus{}pairs} \PYG{o}{=} \PYG{n+nb}{zip}\PYG{p}{(}\PYG{n}{X\PYGZus{}test}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}user\PYGZus{}id\PYGZsq{}}\PYG{p}{],} \PYG{n}{X\PYGZus{}test}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}anime\PYGZus{}id\PYGZsq{}}\PYG{p}{])}
+  \PYG{n}{y\PYGZus{}pred} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{([}\PYG{n}{anime\PYGZus{}model}\PYG{p}{(}\PYG{n}{user}\PYG{p}{,} \PYG{n}{anime}\PYG{p}{)} \PYG{k}{for} \PYG{p}{(}\PYG{n}{user}\PYG{p}{,} \PYG{n}{anime}\PYG{p}{)} \PYG{o+ow}{in} \PYG{n}{id\PYGZus{}pairs}\PYG{p}{])}
+  \PYG{n}{y\PYGZus{}true} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{n}{X\PYGZus{}test}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}rating\PYGZsq{}}\PYG{p}{])}
+  \PYG{k}{return} \PYG{n}{mean\PYGZus{}squared\PYGZus{}error}\PYG{p}{(}\PYG{n}{y\PYGZus{}true}\PYG{p}{,} \PYG{n}{y\PYGZus{}pred}\PYG{p}{,} \PYG{n}{squared}\PYG{o}{=}\PYG{k+kc}{False}\PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{model\PYGZus{}weightmean}\PYG{p}{(}\PYG{n}{user\PYGZus{}id}\PYG{p}{,} \PYG{n}{anime\PYGZus{}id}\PYG{p}{):}
+  \PYG{k}{if} \PYG{n}{anime\PYGZus{}id} \PYG{o+ow}{in} \PYG{n}{r\PYGZus{}matrix}\PYG{p}{:}
+    \PYG{n}{similars} \PYG{o}{=} \PYG{n}{cosine\PYGZus{}sim}\PYG{p}{[}\PYG{n}{user\PYGZus{}id}\PYG{p}{]}
+    \PYG{c+c1}{\PYGZsh{} оценки пользователей для аниме}
+    \PYG{n}{m\PYGZus{}ratings} \PYG{o}{=} \PYG{n}{r\PYGZus{}matrix}\PYG{p}{[}\PYG{n}{anime\PYGZus{}id}\PYG{p}{]}
+    \PYG{c+c1}{\PYGZsh{} запишем индексы тех элементов, что имеют нулевое косинусное сходство}
+    \PYG{n}{idx} \PYG{o}{=} \PYG{n}{m\PYGZus{}ratings}\PYG{p}{[}\PYG{n}{m\PYGZus{}ratings}\PYG{o}{.}\PYG{n}{isnull}\PYG{p}{()]}\PYG{o}{.}\PYG{n}{index}
+    \PYG{c+c1}{\PYGZsh{}удалим оценки, которые содержат Nan}
+    \PYG{n}{m\PYGZus{}ratings} \PYG{o}{=} \PYG{n}{m\PYGZus{}ratings}\PYG{o}{.}\PYG{n}{dropna}\PYG{p}{()}
+    \PYG{c+c1}{\PYGZsh{} удалим косинусное сходство элементов, которые содержат Nan}
+    \PYG{n}{similars} \PYG{o}{=} \PYG{n}{similars}\PYG{o}{.}\PYG{n}{drop}\PYG{p}{(}\PYG{n}{idx}\PYG{p}{)}
+    \PYG{c+c1}{\PYGZsh{} рассчитаем средневзвешенное по формуле}
+    \PYG{n}{weightmean} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{dot}\PYG{p}{(}\PYG{n}{similars}\PYG{p}{,} \PYG{n}{m\PYGZus{}ratings}\PYG{p}{)}\PYG{o}{/} \PYG{n}{similars}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{()}
+  \PYG{k}{else}\PYG{p}{:}
+    \PYG{n}{weightmean} \PYG{o}{=} \PYG{l+m+mf}{5.0}
+  \PYG{k}{return} \PYG{n}{weightmean}
+\end{Verbatim}

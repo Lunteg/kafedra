@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{embedding\PYGZus{}size} \PYG{o}{=} \PYG{l+m+mi}{128}
+ \PYG{n}{user} \PYG{o}{=} \PYG{n}{Input}\PYG{p}{(}\PYG{n}{name} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}user\PYGZsq{}}\PYG{p}{,} \PYG{n}{shape} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{])}
+ \PYG{n}{user\PYGZus{}embedding} \PYG{o}{=} \PYG{n}{Embedding}\PYG{p}{(}\PYG{n}{name} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}user\PYGZus{}embedding\PYGZsq{}}\PYG{p}{,}
+                       \PYG{n}{input\PYGZus{}dim} \PYG{o}{=} \PYG{n}{n\PYGZus{}users}\PYG{p}{,}
+                       \PYG{n}{output\PYGZus{}dim} \PYG{o}{=} \PYG{n}{embedding\PYGZus{}size}\PYG{p}{)(}\PYG{n}{user}\PYG{p}{)}
+ \PYG{n}{anime} \PYG{o}{=} \PYG{n}{Input}\PYG{p}{(}\PYG{n}{name} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}anime\PYGZsq{}}\PYG{p}{,} \PYG{n}{shape} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{])}
+ \PYG{n}{anime\PYGZus{}embedding} \PYG{o}{=} \PYG{n}{Embedding}\PYG{p}{(}\PYG{n}{name} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}anime\PYGZus{}embedding\PYGZsq{}}\PYG{p}{,}
+                       \PYG{n}{input\PYGZus{}dim} \PYG{o}{=} \PYG{n}{n\PYGZus{}animes}\PYG{p}{,}
+                       \PYG{n}{output\PYGZus{}dim} \PYG{o}{=} \PYG{n}{embedding\PYGZus{}size}\PYG{p}{)(}\PYG{n}{anime}\PYG{p}{)}
+
+\end{Verbatim}

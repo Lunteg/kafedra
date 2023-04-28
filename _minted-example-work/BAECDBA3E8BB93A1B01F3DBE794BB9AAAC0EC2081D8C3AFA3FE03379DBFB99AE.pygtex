@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{mean\PYGZus{}model}\PYG{p}{(}\PYG{n}{user\PYGZus{}id}\PYG{p}{,} \PYG{n}{anime\PYGZus{}id}\PYG{p}{):}
+  \PYG{k}{if} \PYG{n}{anime\PYGZus{}id} \PYG{o+ow}{in} \PYG{n}{r\PYGZus{}matrix}\PYG{p}{:}
+    \PYG{n}{mean\PYGZus{}raiting} \PYG{o}{=} \PYG{n}{r\PYGZus{}matrix}\PYG{p}{[}\PYG{n}{anime\PYGZus{}id}\PYG{p}{]}\PYG{o}{.}\PYG{n}{mean}\PYG{p}{()}
+  \PYG{k}{else}\PYG{p}{:}
+    \PYG{n}{mean\PYGZus{}raiting} \PYG{o}{=} \PYG{l+m+mf}{5.0}
+  \PYG{k}{return} \PYG{n}{mean\PYGZus{}raiting}
+
+\end{Verbatim}

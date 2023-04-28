@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{tuner} \PYG{o}{=} \PYG{n}{BayesianOptimization}\PYG{p}{(}
+    \PYG{n}{RecommenderNet}\PYG{p}{,}
+    \PYG{n}{objective}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}val\PYGZus{}mse\PYGZsq{}}\PYG{p}{,}
+    \PYG{n}{max\PYGZus{}trials}\PYG{o}{=}\PYG{l+m+mi}{10}\PYG{p}{,}
+    \PYG{n}{directory}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}test\PYGZus{}directory\PYGZsq{}}
+    \PYG{p}{)}
+\end{Verbatim}

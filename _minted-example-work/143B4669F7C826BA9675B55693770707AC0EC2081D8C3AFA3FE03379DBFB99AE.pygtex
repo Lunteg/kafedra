@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{grouped} \PYG{o}{=} \PYG{n}{rating\PYGZus{}df}\PYG{o}{.}\PYG{n}{groupby}\PYG{p}{([}\PYG{l+s+s1}{\PYGZsq{}user\PYGZus{}id\PYGZsq{}}\PYG{p}{])}\PYG{o}{.}\PYG{n}{agg}\PYG{p}{(\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}rating\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}mean\PYGZsq{}}\PYG{p}{\PYGZcb{})}
+\PYG{n}{grouped} \PYG{o}{=} \PYG{n}{grouped}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[}\PYG{n}{grouped}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}rating\PYGZsq{}}\PYG{p}{]} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{]}
+\PYG{n}{user\PYGZus{}ids} \PYG{o}{=} \PYG{n}{grouped}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}user\PYGZus{}id\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{unique}\PYG{p}{()}
+\PYG{n}{rating\PYGZus{}df} \PYG{o}{=} \PYG{n}{rating\PYGZus{}df}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[}\PYG{o}{\PYGZti{}}\PYG{n}{rating\PYGZus{}df}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}user\PYGZus{}id\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{isin}\PYG{p}{(}\PYG{n}{user\PYGZus{}ids}\PYG{p}{)]}
+\PYG{n}{grouped} \PYG{o}{=} \PYG{n}{rating\PYGZus{}df}\PYG{o}{.}\PYG{n}{groupby}\PYG{p}{([}\PYG{l+s+s1}{\PYGZsq{}anime\PYGZus{}id\PYGZsq{}}\PYG{p}{])}\PYG{o}{.}\PYG{n}{agg}\PYG{p}{(\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}rating\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}mean\PYGZsq{}}\PYG{p}{\PYGZcb{})}
+\PYG{n}{grouped} \PYG{o}{=} \PYG{n}{grouped}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[}\PYG{n}{grouped}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}rating\PYGZsq{}}\PYG{p}{]} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{]}
+\PYG{n}{user\PYGZus{}ids} \PYG{o}{=} \PYG{n}{grouped}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}anime\PYGZus{}id\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{unique}\PYG{p}{()}
+\PYG{n}{rating\PYGZus{}df} \PYG{o}{=} \PYG{n}{rating\PYGZus{}df}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[}\PYG{o}{\PYGZti{}}\PYG{n}{rating\PYGZus{}df}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}anime\PYGZus{}id\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{isin}\PYG{p}{(}\PYG{n}{user\PYGZus{}ids}\PYG{p}{)]}
+\end{Verbatim}

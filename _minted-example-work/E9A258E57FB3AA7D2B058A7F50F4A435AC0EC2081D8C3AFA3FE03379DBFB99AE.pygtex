@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{n\PYGZus{}ratings} \PYG{o}{=} \PYG{n}{rating\PYGZus{}df}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}user\PYGZus{}id\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{value\PYGZus{}counts}\PYG{p}{()}
+\PYG{n}{rating\PYGZus{}df} \PYG{o}{=} \PYG{n}{rating\PYGZus{}df}\PYG{p}{[}\PYG{n}{rating\PYGZus{}df}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}user\PYGZus{}id\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{isin}\PYG{p}{(}\PYG{n}{n\PYGZus{}ratings}\PYG{p}{[}\PYG{n}{n\PYGZus{}ratings} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mi}{1000}\PYG{p}{]}\PYG{o}{.}\PYG{n}{index}\PYG{p}{)]}
+\end{Verbatim}

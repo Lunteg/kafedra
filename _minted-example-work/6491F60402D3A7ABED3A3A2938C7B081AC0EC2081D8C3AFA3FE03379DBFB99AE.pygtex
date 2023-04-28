@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{x} \PYG{o}{=} \PYG{n}{Dense}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{kernel\PYGZus{}initializer}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}he\PYGZus{}normal\PYGZsq{}}\PYG{p}{)(}\PYG{n}{x}\PYG{p}{)}
+\PYG{n}{x} \PYG{o}{=} \PYG{n}{BatchNormalization}\PYG{p}{()(}\PYG{n}{x}\PYG{p}{)}
+\end{Verbatim}

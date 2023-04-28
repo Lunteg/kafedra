@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{r\PYGZus{}matrix\PYGZus{}notnull} \PYG{o}{=} \PYG{n}{r\PYGZus{}matrix}\PYG{o}{.}\PYG{n}{copy}\PYG{p}{()}\PYG{o}{.}\PYG{n}{fillna}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)}
+\end{Verbatim}
