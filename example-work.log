@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.28)  28 APR 2023 23:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.28)  28 APR 2023 23:30
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1656,14 +1656,7 @@ LaTeX Font Info:    Font shape `T1/Tempora-TLF/m/n' will be
 File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count331
 \l__pdf_internal_box=\box71
-) (./example-work.aux
-LaTeX Font Info:    Trying to load font information for T2A+Tempora-TLF on input line 19.
- (c:/texlive/2023/texmf-dist/tex/latex/tempora/t2atempora-tlf.fd
-File: t2atempora-tlf.fd 2015/09/13 Font definitions for T2A/Tempora-TLF.
-)
-LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 19.
-)
+) (./example-work.aux)
 \openout1 = `example-work.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
@@ -1790,292 +1783,3383 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (c:/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
+LaTeX Font Info:    Trying to load font information for T2A+Tempora-TLF on input line 44.
+ (c:/texlive/2023/texmf-dist/tex/latex/tempora/t2atempora-tlf.fd
+File: t2atempora-tlf.fd 2015/09/13 Font definitions for T2A/Tempora-TLF.
+)
+LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
+(Font)              scaled to size 14.4pt on input line 44.
 LaTeX Info: Redefining \th on input line 44.
 \c@mv@tabular=\count338
 \c@mv@boldtabular=\count339
 Package hyperref Info: Link coloring ON on input line 44.
- (./example-work.out) (./example-work.out)
 \@outlinefile=\write5
 \openout5 = `example-work.out'.
 
 LaTeX Font Info:    Font shape `T2A/Tempora-TLF/b/n' will be
 (Font)              scaled to size 14.4pt on input line 108.
- [1
+LaTeX Font Info:    Trying to load font information for TS1+Tempora-TLF on input line 108.
+ (c:/texlive/2023/texmf-dist/tex/latex/tempora/TS1Tempora-TLF.fd
+File: TS1Tempora-TLF.fd 2016/02/02 (autoinst) Font definitions for TS1/Tempora-TLF.
+)
+LaTeX Font Info:    Font shape `TS1/Tempora-TLF/m/n' will be
+(Font)              scaled to size 14.4pt on input line 108.
+LaTeX Font Info:    Trying to load font information for OT1+Tempora-TLF on input line 108.
+ (c:/texlive/2023/texmf-dist/tex/latex/tempora/OT1Tempora-TLF.fd
+File: OT1Tempora-TLF.fd 2016/02/02 (autoinst) Font definitions for OT1/Tempora-TLF.
+)
+LaTeX Font Info:    Font shape `OT1/Tempora-TLF/m/n' will be
+(Font)              scaled to size 14.4pt on input line 108.
 
-{c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2023/texmf-dist/fonts/enc/dvips/tempora/t2a-tempora.enc}] (./example-work.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
- (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: Missing $ inserted.
+<inserted text> 
+                $
+l.108 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 108.
+(c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 108.
  (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 17.
-LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 17.
-)
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \cyrje invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \quotesinglbase invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \quotesinglbase invalid in math mode on input line 108.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: Improper \spacefactor.
+\save@sf@q ...@SF {\spacefactor \the \spacefactor 
+                                                  }#1\@SF \endgroup 
+l.108 
+      
+You can refer to \spacefactor only in horizontal mode;
+you can refer to \prevdepth only in vertical mode; and
+neither of these is meaningful inside \write. So
+I'm forgetting what you said and using zero instead.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: You can't use `\spacefactor' in math mode.
+\@SF ->\spacefactor 
+                    0
+l.108 
+      
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \cyryo invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 108.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.108 
+      
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.108 
+      
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+LaTeX Warning: Command \CYRG invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \cyrie invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \cyrdze invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \textnumero invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \cyrie invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \cyryo invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRDJE invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRDZE invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \quotesinglbase invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \quotesinglbase invalid in math mode on input line 108.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: Improper \spacefactor.
+\save@sf@q ...@SF {\spacefactor \the \spacefactor 
+                                                  }#1\@SF \endgroup 
+l.108 
+      
+You can refer to \spacefactor only in horizontal mode;
+you can refer to \prevdepth only in vertical mode; and
+neither of these is meaningful inside \write. So
+I'm forgetting what you said and using zero instead.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: You can't use `\spacefactor' in math mode.
+\@SF ->\spacefactor 
+                    0
+l.108 
+      
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \cyryo invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \cyryo unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \cyrie invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \cyrie unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \cyryo invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \cyryo unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \cyryo invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \cyryo unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \cyrie invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \cyrie unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \cyrdze invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \cyrdze unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \cyrje invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \cyrje unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \cyryi invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \cyryi unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \CYRS unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRNJE invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \CYRNJE unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \CYRS unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRTSHE invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \CYRTSHE unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \CYRS unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \quotesinglbase invalid in math mode on input line 108.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: Improper \spacefactor.
+\save@sf@q ...@SF {\spacefactor \the \spacefactor 
+                                                  }#1\@SF \endgroup 
+l.108 
+      
+You can refer to \spacefactor only in horizontal mode;
+you can refer to \prevdepth only in vertical mode; and
+neither of these is meaningful inside \write. So
+I'm forgetting what you said and using zero instead.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: You can't use `\spacefactor' in math mode.
+\@SF ->\spacefactor 
+                    0
+l.108 
+      
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \CYRS unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRDJE invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \CYRDJE unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRDZE invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \CYRDZE unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \CYRS unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \guilsinglleft invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \CYRS unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRDZE invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \CYRDZE unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \CYRS unavailable in encoding TS1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \cyrg unavailable in encoding TS1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.108 
+      
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: Missing { inserted.
+<to be read again> 
+                   \edef 
+l.108 
+      
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+LaTeX Warning: Command \cyrg invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \cyrg unavailable in encoding TS1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \cyrie invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \cyrie unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \end{center} invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: Missing } inserted.
+<inserted text> 
+                }
+l.108 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: Missing } inserted.
+<inserted text> 
+                }
+l.108 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: Missing $ inserted.
+<inserted text> 
+                $
+l.108 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: Missing $ inserted.
+<inserted text> 
+                $
+l.108 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \textnumero invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRDJE invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRDZE invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRDZE invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRDZE invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \guilsinglleft invalid in math mode on input line 108.
+
+LaTeX Font Info:    Font shape `OT1/Tempora-TLF/b/n' will be
+(Font)              scaled to size 14.4pt on input line 108.
+
+LaTeX Warning: Command \guilsinglleft invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 108.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.108 
+      
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.108 
+      
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+LaTeX Warning: Command \CYRG invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \quotesinglbase invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \quotesinglbase invalid in math mode on input line 108.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: Improper \spacefactor.
+\save@sf@q ...@SF {\spacefactor \the \spacefactor 
+                                                  }#1\@SF \endgroup 
+l.108 
+      
+You can refer to \spacefactor only in horizontal mode;
+you can refer to \prevdepth only in vertical mode; and
+neither of these is meaningful inside \write. So
+I'm forgetting what you said and using zero instead.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: You can't use `\spacefactor' in math mode.
+\@SF ->\spacefactor 
+                    0
+l.108 
+      
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRYO invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \CYRYO unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: Missing $ inserted.
+<inserted text> 
+                $
+l.108 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: Missing $ inserted.
+<inserted text> 
+                $
+l.108 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRDZE invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRDJE invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \cyryo invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRDZHE invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: Missing $ inserted.
+<inserted text> 
+                $
+l.108 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: Missing } inserted.
+<inserted text> 
+                }
+l.108 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.108 
+      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: Missing $ inserted.
+<inserted text> 
+                $
+l.108 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRDJE invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \cyrdze invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRII invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \textquotedblright invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRDZE invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \cyryo invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \guillemetright invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \guilsinglleft invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \guilsinglleft invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 108.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.108 
+      
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.108 
+      
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+LaTeX Warning: Command \cyrk invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \cyryo invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \cyrie invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \cyrdze invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \guillemetright invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \CYRR unavailable in encoding TS1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \CYRR unavailable in encoding TS1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRII invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \CYRII unavailable in encoding TS1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \CYRR unavailable in encoding TS1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \cyryo invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \cyryo unavailable in encoding TS1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \CYRS unavailable in encoding TS1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \CYRR unavailable in encoding TS1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 108.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Command \end{flushleft} invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: Missing } inserted.
+<inserted text> 
+                }
+l.108 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: Missing $ inserted.
+<inserted text> 
+                $
+l.108 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: Missing $ inserted.
+<inserted text> 
+                $
+l.108 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRDZE invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \quotesinglbase invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \quotesinglbase invalid in math mode on input line 108.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: Improper \spacefactor.
+\save@sf@q ...@SF {\spacefactor \the \spacefactor 
+                                                  }#1\@SF \endgroup 
+l.108 
+      
+You can refer to \spacefactor only in horizontal mode;
+you can refer to \prevdepth only in vertical mode; and
+neither of these is meaningful inside \write. So
+I'm forgetting what you said and using zero instead.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: You can't use `\spacefactor' in math mode.
+\@SF ->\spacefactor 
+                    0
+l.108 
+      
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \cyrie invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \quotedblbase invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \cyrje invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 108.
+
+
+LaTeX Warning: Command \CYRDZE invalid in math mode on input line 108.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: Extra }, or forgotten $.
+\signature #1#2-> \hbox to 7cm{#1\hfill }
+                                          \hbox to 3cm{\hrulefill } \hbox to...
+l.108 
+      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: Missing $ inserted.
+<inserted text> 
+                $
+l.108 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+Missing character: There is no � in font cmr12!
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 
+      
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:108: Missing } inserted.
+<inserted text> 
+                }
+l.108 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (172.45615pt too wide) detected at line 108
+\T2A/Tempora-TLF/m/n/14.4 РЯ�\TS1/Tempora-TLF/m/n/14.4 �\T2A/Tempora-TLF/m/n/14.4 �$\OML/cmm/m/it/14.4 ^^V[]; : : \OMS/cmsy/m/n/14.4 ^^@ \OML/cmm/m/it/14.4 j: : [][]$
+ []
+
+[1
+
+{c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2023/texmf-dist/fonts/enc/dvips/tempora/t2a-tempora.enc}{c:/texlive/2023/texmf-dist/fonts/enc/dvips/tempora/tmp_ac5xuc.enc}{c:/texlive/2023/texmf-dist/fonts/enc/dvips/tempora/tmp_q3dzgc.enc}]
+No file example-work.toc.
 \tf@toc=\write6
 \openout6 = `example-work.toc'.
 
- [2
+[2
 
-] [3
-
-] [4
-
-] [5] [6] [7] [8]
-LaTeX Font Info:    Trying to load font information for T2A+pcr on input line 265.
-LaTeX Font Info:    No file T2Apcr.fd. on input line 265.
-
-
-LaTeX Font Warning: Font shape `T2A/pcr/m/n' undefined
-(Font)              using `T2A/cmr/m/n' instead on input line 265.
-
-<disc1.png, id=212, 688.5725pt x 266.9975pt>
-File: disc1.png Graphic file (type png)
-<use disc1.png>
-Package pdftex.def Info: disc1.png  used on input line 282.
-(pdftex.def)             Requested size: 386.95897pt x 150.04312pt.
-LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 284.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[9
-
-{c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 308.
+]
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: Missing $ inserted.
+<inserted text> 
+                $
+l.136 В совре
+                   менном мире практически на все,...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 308.
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 308.
+LaTeX Warning: Command \cyrje invalid in math mode on input line 136.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 308.
-
-[10 <./disc1.png>]
-\openout3 = `example-work.pyg'.
-
- (./_minted-example-work/default.pygstyle) (./_minted-example-work/E9A258E57FB3AA7D2B058A7F50F4A435AC0EC2081D8C3AFA3FE03379DBFB99AE.pygtex
-LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 2.
- (c:/texlive/2023/texmf-dist/tex/latex/psnfss/ts1pcr.fd
-File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
-)
-LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 2.
-)
-<analis1.png, id=223, 859.21pt x 412.54124pt>
-File: analis1.png Graphic file (type png)
-<use analis1.png>
-Package pdftex.def Info: analis1.png  used on input line 339.
-(pdftex.def)             Requested size: 386.95897pt x 185.79292pt.
-<analis2.png, id=224, 762.85pt x 419.5675pt>
-File: analis2.png Graphic file (type png)
-<use analis2.png>
-Package pdftex.def Info: analis2.png  used on input line 357.
-(pdftex.def)             Requested size: 386.95897pt x 212.82422pt.
- [11{c:/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc} <./analis1.png>]
-<analis3.png, id=232, 797.98125pt x 570.13pt>
-File: analis3.png Graphic file (type png)
-<use analis3.png>
-Package pdftex.def Info: analis3.png  used on input line 370.
-(pdftex.def)             Requested size: 386.95897pt x 276.46922pt.
-<analis4.png, id=233, 748.7975pt x 651.43375pt>
-File: analis4.png Graphic file (type png)
-<use analis4.png>
-Package pdftex.def Info: analis4.png  used on input line 388.
-(pdftex.def)             Requested size: 386.95897pt x 336.65013pt.
- [12 <./analis2.png> <./analis3.png>]
-<analis5.png, id=240, 829.0975pt x 371.3875pt>
-File: analis5.png Graphic file (type png)
-<use analis5.png>
-Package pdftex.def Info: analis5.png  used on input line 406.
-(pdftex.def)             Requested size: 386.95897pt x 173.33376pt.
- [13 <./analis4.png> <./analis5.png>]
-<analis6.png, id=248, 821.0675pt x 347.2975pt>
-File: analis6.png Graphic file (type png)
-<use analis6.png>
-Package pdftex.def Info: analis6.png  used on input line 424.
-(pdftex.def)             Requested size: 386.95897pt x 163.67499pt.
-<analis7.png, id=249, 803.0pt x 142.5325pt>
-File: analis7.png Graphic file (type png)
-<use analis7.png>
-Package pdftex.def Info: analis7.png  used on input line 441.
-(pdftex.def)             Requested size: 386.95897pt x 68.68666pt.
-\openout3 = `example-work.pyg'.
-
- (./_minted-example-work/2F51F8BA1D82F7F150A3F2DCA64C31B9AC0EC2081D8C3AFA3FE03379DBFB99AE.pygtex)
-\openout3 = `example-work.pyg'.
-
- (./_minted-example-work/143B4669F7C826BA9675B55693770707AC0EC2081D8C3AFA3FE03379DBFB99AE.pygtex [14 <./analis6.png> <./analis7.png>])
-\openout3 = `example-work.pyg'.
-
- (./_minted-example-work/C7B60F53A9664217742D3469665752AEAC0EC2081D8C3AFA3FE03379DBFB99AE.pygtex
-
-LaTeX Font Warning: Font shape `T2A/pcr/b/n' undefined
-(Font)              using `T2A/pcr/m/n' instead on input line 2.
-
-)
-\openout3 = `example-work.pyg'.
-
- (./_minted-example-work/9134024717AF3EFA26B1B0EAC8E0F6A0AC0EC2081D8C3AFA3FE03379DBFB99AE.pygtex [15])
-\openout3 = `example-work.pyg'.
-
- (./_minted-example-work/227EAC8000E283C2B285F6E084C58E2BAC0EC2081D8C3AFA3FE03379DBFB99AE.pygtex)
-\openout3 = `example-work.pyg'.
-
- (./_minted-example-work/84A810CC18C1C8C6F6E9BA2A60151D9CAC0EC2081D8C3AFA3FE03379DBFB99AE.pygtex)
-\openout3 = `example-work.pyg'.
-
- (./_minted-example-work/BAECDBA3E8BB93A1B01F3DBE794BB9AAAC0EC2081D8C3AFA3FE03379DBFB99AE.pygtex [16])
-\openout3 = `example-work.pyg'.
-
- (./_minted-example-work/753D3D4239920FACD13F14613FFC53B7AC0EC2081D8C3AFA3FE03379DBFB99AE.pygtex)
-\openout3 = `example-work.pyg'.
-
- (./_minted-example-work/94EC94CAD9309AFECC788B9738D5C26AAC0EC2081D8C3AFA3FE03379DBFB99AE.pygtex)
-\openout3 = `example-work.pyg'.
-
- (./_minted-example-work/79715A0D36EAA5E4E361B854681C8E69AC0EC2081D8C3AFA3FE03379DBFB99AE.pygtex)
-\openout3 = `example-work.pyg'.
-
- (./_minted-example-work/548005D36A161DA0AA1D2ABC200589D9AC0EC2081D8C3AFA3FE03379DBFB99AE.pygtex [17]
-
-LaTeX Font Warning: Font shape `T2A/pcr/m/it' undefined
-(Font)              using `T2A/pcr/m/n' instead on input line 5.
-
-)
-\openout3 = `example-work.pyg'.
-
- (./_minted-example-work/FC1DC3DF43C302C3B97DD85AFEBBFFE8AC0EC2081D8C3AFA3FE03379DBFB99AE.pygtex [18])
-\openout3 = `example-work.pyg'.
-
- (./_minted-example-work/56F28E4933AE387EF53C46DA18E0D50CAC0EC2081D8C3AFA3FE03379DBFB99AE.pygtex)
-\openout3 = `example-work.pyg'.
-
- (./_minted-example-work/F3AF8347D1A5020613BCA4477CF64944AC0EC2081D8C3AFA3FE03379DBFB99AE.pygtex) [19]
-\openout3 = `example-work.pyg'.
-
- (./_minted-example-work/10AB4551F1F615FF668E362D1E0C6E96AC0EC2081D8C3AFA3FE03379DBFB99AE.pygtex)
-\openout3 = `example-work.pyg'.
-
- (./_minted-example-work/1DEBE942BCA3DE0AA189F3B07422BD52AC0EC2081D8C3AFA3FE03379DBFB99AE.pygtex)
-\openout3 = `example-work.pyg'.
-
- (./_minted-example-work/6491F60402D3A7ABED3A3A2938C7B081AC0EC2081D8C3AFA3FE03379DBFB99AE.pygtex)
-\openout3 = `example-work.pyg'.
-
- (./_minted-example-work/B1F37881BCAC08CBC51AB459469AE99AAC0EC2081D8C3AFA3FE03379DBFB99AE.pygtex)
-\openout3 = `example-work.pyg'.
-
- (./_minted-example-work/B244933A63C6811767B3B7B644346BACAC0EC2081D8C3AFA3FE03379DBFB99AE.pygtex)
-\openout3 = `example-work.pyg'.
-
- (./_minted-example-work/6E84F04D2B21D717D85FCDF417D98E65AC0EC2081D8C3AFA3FE03379DBFB99AE.pygtex [20])
-\openout3 = `example-work.pyg'.
-
- (./_minted-example-work/3BC31ECE2C6848B86C50C20180965C27AC0EC2081D8C3AFA3FE03379DBFB99AE.pygtex)
-<pract1.png, id=284, 312.16624pt x 405.515pt>
-File: pract1.png Graphic file (type png)
-<use pract1.png>
-Package pdftex.def Info: pract1.png  used on input line 725.
-(pdftex.def)             Requested size: 145.11053pt x 188.50682pt.
-<pract2.png, id=285, 1050.92625pt x 63.23625pt>
-File: pract2.png Graphic file (type png)
-<use pract2.png>
-Package pdftex.def Info: pract2.png  used on input line 740.
-(pdftex.def)             Requested size: 386.95897pt x 23.28413pt.
- [21 <./pract1.png>]
-<pract3.png, id=291, 1046.91125pt x 54.2025pt>
-File: pract3.png Graphic file (type png)
-<use pract3.png>
-Package pdftex.def Info: pract3.png  used on input line 752.
-(pdftex.def)             Requested size: 386.95897pt x 20.03392pt.
-<pract4.png, id=292, 1034.86626pt x 57.21375pt>
-File: pract4.png Graphic file (type png)
-<use pract4.png>
-Package pdftex.def Info: pract4.png  used on input line 764.
-(pdftex.def)             Requested size: 386.95897pt x 21.39311pt.
- [22 <./pract2.png> <./pract3.png> <./pract4.png>]
-\openout3 = `example-work.pyg'.
-
- (./_minted-example-work/33462377ADC49E367F137785DA3706ACAC0EC2081D8C3AFA3FE03379DBFB99AE.pygtex)
-\openout3 = `example-work.pyg'.
-
- (./_minted-example-work/B7D36FC81695226AEB9B9424F3F409EDAC0EC2081D8C3AFA3FE03379DBFB99AE.pygtex)
-\openout3 = `example-work.pyg'.
-
- (./_minted-example-work/465F8454A32BC55AB4373A2358D5DB60AC0EC2081D8C3AFA3FE03379DBFB99AE.pygtex)
-<res1.png, id=303, 1490.56876pt x 509.905pt>
-File: res1.png Graphic file (type png)
-<use res1.png>
-Package pdftex.def Info: res1.png  used on input line 841.
-(pdftex.def)             Requested size: 386.95897pt x 132.36987pt.
- [23]
-\openout3 = `example-work.pyg'.
-
- (./_minted-example-work/19A80CB3C23CD72D44A3E93F9EF8F669AC0EC2081D8C3AFA3FE03379DBFB99AE.pygtex)
-<res2.png, id=309, 902.37125pt x 328.22626pt>
-File: res2.png Graphic file (type png)
-<use res2.png>
-Package pdftex.def Info: res2.png  used on input line 879.
-(pdftex.def)             Requested size: 386.95897pt x 140.7539pt.
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
 
-[24 <./res1.png>] [25 <./res2.png>] [26
 
-] (./example-work.bbl [27]
+LaTeX Warning: Command \CYRDZE invalid in math mode on input line 136.
 
-LaTeX Warning: Empty `thebibliography' environment on input line 12.
 
-)
-\openout3 = `example-work.pyg'.
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
 
- (./_minted-example-work/CC87D7CBF1C7EC02128968D499C54B9CAC0EC2081D8C3AFA3FE03379DBFB99AE.pygtex [28
 
-] [29]) [30]
-\openout3 = `example-work.pyg'.
+LaTeX Warning: Command \CYRDZE invalid in math mode on input line 136.
 
- (./_minted-example-work/CE0E772EE8DA38AE67271A7B01BE2AEBAC0EC2081D8C3AFA3FE03379DBFB99AE.pygtex [31
 
-]) [32]
-\openout3 = `example-work.pyg'.
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
 
- (./_minted-example-work/4EB3E515FA4BADD673D8066841B21641AC0EC2081D8C3AFA3FE03379DBFB99AE.pygtex [33
 
-] [34]) [35] (./example-work.aux)
+LaTeX Warning: Command \cyrdze invalid in math mode on input line 136.
 
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: File `example-work.out' has not changed.
-(rerunfilecheck)             Checksum: 21550BEEBC848D3D75B2558CE57AB883;7965.
-runsystem(del example-work.pyg)...executed.
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
 
- ) 
+
+LaTeX Warning: Command \cyrje invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \cyrje invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \cyryo invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \CYRDJE invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \cyryi invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \CYRDJE invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \cyrie invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \quotesinglbase invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \quotesinglbase invalid in math mode on input line 136.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: Improper \spacefactor.
+\save@sf@q ...@SF {\spacefactor \the \spacefactor 
+                                                  }#1\@SF \endgroup 
+l.136 ...�овременном мире практ
+                                                  ически на все, ...
+You can refer to \spacefactor only in horizontal mode;
+you can refer to \prevdepth only in vertical mode; and
+neither of these is meaningful inside \write. So
+I'm forgetting what you said and using zero instead.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: You can't use `\spacefactor' in math mode.
+\@SF ->\spacefactor 
+                    0
+l.136 ...�овременном мире практ
+                                                  ически на все, ...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \cyryo invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 136.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.136 ...�менном мире практичес
+                                                  ки на все, что �...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.136 ...�менном мире практичес
+                                                  ки на все, что �...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+LaTeX Warning: Command \CYRG invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \cyrie invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \cyryo invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \CYRDZE invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRR unavailable in encoding TS1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...м мире практически на �
+                                                  �се, что мы пок�...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRII invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRII unavailable in encoding TS1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...� мире практически на в
+                                                  се, что мы поку...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRS unavailable in encoding TS1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ... мире практически на в�
+                                                  �е, что мы поку�...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRG unavailable in encoding TS1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...мире практически на вс
+                                                  е, что мы покуп...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.136 ...мире практически на вс
+                                                  е, что мы покуп...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: Missing { inserted.
+<to be read again> 
+                   \edef 
+l.136 ...мире практически на вс
+                                                  е, что мы покуп...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+LaTeX Warning: Command \CYRG invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRG unavailable in encoding TS1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...мире практически на вс
+                                                  е, что мы покуп...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...�ире практически на вс�
+                                                  �, что мы покуп�...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRS unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...�е практически на все, �
+                                                  �то мы покупае�...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRS unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...� практически на все, ч�
+                                                  �о мы покупаем ...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \quotesinglbase invalid in math mode on input line 136.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: Improper \spacefactor.
+\save@sf@q ...@SF {\spacefactor \the \spacefactor 
+                                                  }#1\@SF \endgroup 
+l.136 ... практически на все, чт
+                                                  о мы покупаем �...
+You can refer to \spacefactor only in horizontal mode;
+you can refer to \prevdepth only in vertical mode; and
+neither of these is meaningful inside \write. So
+I'm forgetting what you said and using zero instead.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: You can't use `\spacefactor' in math mode.
+\@SF ->\spacefactor 
+                    0
+l.136 ... практически на все, чт
+                                                  о мы покупаем �...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...практически на все, чт�
+                                                  � мы покупаем и...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \cyrdze invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \cyrdze unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...�рактически на все, что
+                                                   мы покупаем и�...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...�актически на все, что �
+                                                  �ы покупаем ил�...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \cyrje invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \cyrje unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...актически на все, что м
+                                                  ы покупаем или...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRS unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...�ктически на все, что м�
+                                                  � покупаем или ...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \guilsinglleft invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...тически на все, что мы �
+                                                  �окупаем или п�...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \cyryi invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \cyryi unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...�ически на все, что мы п
+                                                  окупаем или по...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...ически на все, что мы п�
+                                                  �купаем или по�...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \cyrdze invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \cyrdze unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...�чески на все, что мы по
+                                                  купаем или пот...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...чески на все, что мы по�
+                                                  �упаем или пот�...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \cyrie invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \cyrie unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...�ески на все, что мы пок
+                                                  упаем или потр...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRS unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...ески на все, что мы пок�
+                                                  �паем или потр�...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \cyrg unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...�ски на все, что мы поку
+                                                  паем или потре...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.136 ...�ски на все, что мы поку
+                                                  паем или потре...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.136 ...�ски на все, что мы поку
+                                                  паем или потре...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+LaTeX Warning: Command \cyrg invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \cyrg unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...�ски на все, что мы поку
+                                                  паем или потре...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...ски на все, что мы поку�
+                                                  �аем или потре�...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \cyryi invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \cyryi unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...�ки на все, что мы покуп
+                                                  аем или потреб...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...ки на все, что мы покуп�
+                                                  �ем или потреб�...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRR unavailable in encoding TS1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...и на все, что мы покупа�
+                                                  �м или потребл�...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRR unavailable in encoding TS1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ... на все, что мы покупае�
+                                                  � или потребля�...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \cyrje invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \cyrje unavailable in encoding TS1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...на все, что мы покупаем
+                                                   или потребляе...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRR unavailable in encoding TS1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...а все, что мы покупаем �
+                                                  �ли потребляем...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \cyryo invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \cyryo unavailable in encoding TS1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...� все, что мы покупаем и
+                                                  ли потребляем ...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRR unavailable in encoding TS1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ... все, что мы покупаем и�
+                                                  �и потребляем �...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \guillemetright invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \guillemetright invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...�се, что мы покупаем ил�
+                                                  � потребляем в ...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \cyryo invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \cyryo unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...се, что мы покупаем или
+                                                   потребляем в �...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...е, что мы покупаем или �
+                                                  �отребляем в т�...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \cyryi invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \cyryi unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...�, что мы покупаем или п
+                                                  отребляем в то...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ..., что мы покупаем или п�
+                                                  �требляем в то�...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \cyrdze invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \cyrdze unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ... что мы покупаем или по
+                                                  требляем в той...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRS unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...что мы покупаем или по�
+                                                  �ребляем в той ...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \quotesinglbase invalid in math mode on input line 136.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: Improper \spacefactor.
+\save@sf@q ...@SF {\spacefactor \the \spacefactor 
+                                                  }#1\@SF \endgroup 
+l.136 ...�то мы покупаем или пот
+                                                  ребляем в той �...
+You can refer to \spacefactor only in horizontal mode;
+you can refer to \prevdepth only in vertical mode; and
+neither of these is meaningful inside \write. So
+I'm forgetting what you said and using zero instead.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: You can't use `\spacefactor' in math mode.
+\@SF ->\spacefactor 
+                    0
+l.136 ...�то мы покупаем или пот
+                                                  ребляем в той �...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRS unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...то мы покупаем или пот�
+                                                  �ебляем в той и...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRDJE invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRDJE unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...�о мы покупаем или потр
+                                                  ебляем в той и�...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...о мы покупаем или потр�
+                                                  �бляем в той ил...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ... мы покупаем или потре�
+                                                  �ляем в той или...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...�ы покупаем или потреб�
+                                                  �яем в той или �...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \guillemetright invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRS unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...� покупаем или потребл�
+                                                  �ем в той или и�...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRDZHE invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRDZHE unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ... покупаем или потребля
+                                                  ем в той или ин...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...покупаем или потребля�
+                                                  �м в той или ин�...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...окупаем или потребляе�
+                                                  � в той или ино�...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \cyrje invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \cyrje unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...�купаем или потребляем
+                                                   в той или иной...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...�упаем или потребляем �
+                                                  � той или иной �...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRII invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRII unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...упаем или потребляем в
+                                                   той или иной ф...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRS unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...паем или потребляем в �
+                                                  �ой или иной фо...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \quotesinglbase invalid in math mode on input line 136.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: Improper \spacefactor.
+\save@sf@q ...@SF {\spacefactor \the \spacefactor 
+                                                  }#1\@SF \endgroup 
+l.136 ...�аем или потребляем в т
+                                                  ой или иной фо�...
+You can refer to \spacefactor only in horizontal mode;
+you can refer to \prevdepth only in vertical mode; and
+neither of these is meaningful inside \write. So
+I'm forgetting what you said and using zero instead.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: You can't use `\spacefactor' in math mode.
+\@SF ->\spacefactor 
+                    0
+l.136 ...�аем или потребляем в т
+                                                  ой или иной фо�...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...аем или потребляем в т�
+                                                  �й или иной фор...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \cyrdze invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \cyrdze unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...�ем или потребляем в то
+                                                  й или иной фор�...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...ем или потребляем в то�
+                                                  � или иной форм...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \textnumero invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \textnumero invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRR unavailable in encoding TS1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...� или потребляем в той �
+                                                  �ли иной форме ...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \cyryo invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \cyryo unavailable in encoding TS1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ... или потребляем в той и
+                                                  ли иной форме �...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRR unavailable in encoding TS1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...или потребляем в той и�
+                                                  �и иной форме в...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \guillemetright invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \guillemetright invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...ли потребляем в той ил�
+                                                  � иной форме вл...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \cyryo invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \cyryo unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...�и потребляем в той или
+                                                   иной форме вл�...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...� потребляем в той или �
+                                                  �ной форме вли�...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \cyryo invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \cyryo unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ... потребляем в той или и
+                                                  ной форме влия...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...потребляем в той или и�
+                                                  �ой форме влия�...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRDZE invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRDZE unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...�отребляем в той или ин
+                                                  ой форме влияю...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...отребляем в той или ин�
+                                                  �й форме влияю�...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \cyrdze invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \cyrdze unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...�требляем в той или ино
+                                                  й форме влияют...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...требляем в той или ино�
+                                                  � форме влияют ...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \textnumero invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \textnumero invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRS unavailable in encoding TS1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...�ебляем в той или иной �
+                                                  �орме влияют р�...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \quotedblbase invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \quotedblbase invalid in math mode on input line 136.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: Improper \spacefactor.
+\save@sf@q ...@SF {\spacefactor \the \spacefactor 
+                                                  }#1\@SF \endgroup 
+l.136 ...ебляем в той или иной ф
+                                                  орме влияют ре...
+You can refer to \spacefactor only in horizontal mode;
+you can refer to \prevdepth only in vertical mode; and
+neither of these is meaningful inside \write. So
+I'm forgetting what you said and using zero instead.
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: You can't use `\spacefactor' in math mode.
+\@SF ->\spacefactor 
+                    0
+l.136 ...ебляем в той или иной ф
+                                                  орме влияют ре...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...�бляем в той или иной ф�
+                                                  �рме влияют ре�...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \cyrdze invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \cyrdze unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...бляем в той или иной фо
+                                                  рме влияют рек...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRS unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...�ляем в той или иной фо�
+                                                  �ме влияют рек�...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRDJE invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRDJE unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...ляем в той или иной фор
+                                                  ме влияют реко...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...�яем в той или иной фор�
+                                                  �е влияют реко�...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \cyrje invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \cyrje unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...яем в той или иной форм
+                                                  е влияют реком...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...�ем в той или иной форм�
+                                                  � влияют реком�...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...м в той или иной форме �
+                                                  �лияют рекомен...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRII invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRII unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...� в той или иной форме в
+                                                  лияют рекомен�...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ... в той или иной форме в�
+                                                  �ияют рекоменд...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \guillemetright invalid in math mode on input line 136.
+
+
+LaTeX Warning: Command \CYRR invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRR unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...� той или иной форме вл�
+                                                  �яют рекоменда...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \cyryo invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \cyryo unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ... той или иной форме вли
+                                                  яют рекоменда�...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRS unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...той или иной форме вли�
+                                                  �ют рекомендац...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRDZHE invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRDZHE unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...�ой или иной форме влия
+                                                  ют рекомендац�...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRS invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRS unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...ой или иной форме влия�
+                                                  �т рекомендаци...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Command \CYRTSHE invalid in math mode on input line 136.
+
+
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136: LaTeX Error: Command \CYRTSHE unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...�й или иной форме влияю
+                                                  т рекомендаци�...
+(That makes 100 errors; please try again.) 
 Here is how much of TeX's memory you used:
- 21761 strings out of 476001
- 377973 string characters out of 5793197
- 1866068 words of memory out of 5000000
- 41667 multiletter control sequences out of 15000+600000
- 541770 words of font info for 77 fonts, out of 8000000 for 9000
+ 21213 strings out of 476001
+ 358320 string characters out of 5793197
+ 1857068 words of memory out of 5000000
+ 41321 multiletter control sequences out of 15000+600000
+ 528593 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 77i,11n,77p,1044b,941s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2023/texmf-dist/fonts/type1/public/tempora/Tempora-Bold.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/tempora/Tempora-Regular.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on example-work.pdf (35 pages, 1258655 bytes).
-PDF statistics:
- 445 PDF objects out of 1000 (max. 8388607)
- 359 compressed objects within 4 object streams
- 83 named destinations out of 1000 (max. 500000)
- 327 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 77i,5n,77p,709b,573s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
+c:/Users/Tanya/Desktop/kaf/kafedra/example-work.tex:136:  ==> Fatal error occurred, no output PDF file produced!
